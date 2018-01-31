@@ -1,0 +1,1248 @@
+<div class="page_wrap discover_wrap">
+<app-header></app-header>
+
+
+  <main id="main" class="">
+    <div class="media">
+      <section class="main_content">
+
+        <h2>Descobrir Novos Filmes e Séries
+          <span class="right">
+            <a class="movie selected" href="/discover/movie" alt="Search for new movies by different criteria such as years, ratings and genres."
+              title="Search for new movies by different criteria such as years, ratings and genres.">Filmes</a>&nbsp;&nbsp;
+            <a class="tv" href="/discover/tv" alt="Search for new TV shows by different criteria such as years, ratings and genres."
+              title="Search for new TV shows by different criteria such as years, ratings and genres.">Séries</a>
+          </span>
+        </h2>
+
+
+        <style>
+          #year-list.k-list-container,
+          #sort_by-list.k-list-container,
+          #with_genres-list.k-list-container,
+          #with_keyowrds-list.k-list-container {
+            border-color: #f5f5f5;
+          }
+        </style>
+
+        <form id="discover">
+          <input id="vote_count" type="hidden" name="vote_count.gte" value="0">
+          <input id="list_style" type="hidden" name="list_style" value="1">
+
+          <span class="search_element full">
+            <label for="primary_release_year">Ano</label>
+
+            <span title="" class="k-widget k-dropdown k-header" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false"
+              tabindex="0" aria-owns="year_listbox" aria-disabled="false" aria-busy="false" aria-activedescendant="358780ed-0c19-42e3-84d5-6504e151418f"
+              style="width: 100px;">
+              <span unselectable="on" class="k-dropdown-wrap k-state-default">
+                <span unselectable="on" class="k-input">2016</span>
+                <span unselectable="on" class="k-select" aria-label="select">
+                  <span class="k-icon k-i-arrow-60-down"></span>
+                </span>
+              </span>
+              <select id="year" name="primary_release_year" style="width: 100px; display: none;" data-role="dropdownlist">
+                <option value="0">Nenhum</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016" selected="selected">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+                <option value="1934">1934</option>
+                <option value="1933">1933</option>
+                <option value="1932">1932</option>
+                <option value="1931">1931</option>
+                <option value="1930">1930</option>
+                <option value="1929">1929</option>
+                <option value="1928">1928</option>
+                <option value="1927">1927</option>
+                <option value="1926">1926</option>
+                <option value="1925">1925</option>
+                <option value="1924">1924</option>
+                <option value="1923">1923</option>
+                <option value="1922">1922</option>
+                <option value="1921">1921</option>
+                <option value="1920">1920</option>
+                <option value="1919">1919</option>
+                <option value="1918">1918</option>
+                <option value="1917">1917</option>
+                <option value="1916">1916</option>
+                <option value="1915">1915</option>
+                <option value="1914">1914</option>
+                <option value="1913">1913</option>
+                <option value="1912">1912</option>
+                <option value="1911">1911</option>
+                <option value="1910">1910</option>
+                <option value="1909">1909</option>
+                <option value="1908">1908</option>
+                <option value="1907">1907</option>
+                <option value="1906">1906</option>
+                <option value="1905">1905</option>
+                <option value="1904">1904</option>
+                <option value="1903">1903</option>
+                <option value="1902">1902</option>
+                <option value="1901">1901</option>
+                <option value="1900">1900</option>
+              </select>
+            </span>
+
+          </span>
+
+          <span class="search_element full">
+            <label for="sort_by" id="sort_by_label">Ordenar por</label>
+            <span title="" class="k-widget k-dropdown k-header" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false"
+              tabindex="0" aria-owns="sort_by_listbox" aria-labelledby="sort_by_label" aria-disabled="false" aria-busy="false"
+              aria-activedescendant="0723555e-d956-421e-a162-a097242fd57d" style="width: 200px;">
+              <span unselectable="on" class="k-dropdown-wrap k-state-default">
+                <span unselectable="on" class="k-input">Popularidade (maior)</span>
+                <span unselectable="on" class="k-select" aria-label="select">
+                  <span class="k-icon k-i-arrow-60-down"></span>
+                </span>
+              </span>
+              <select id="sort_by" name="sort_by" style="width: 200px; display: none;" data-role="dropdownlist">
+                <option value="popularity.desc" selected="selected">Popularidade (maior)</option>
+                <option value="popularity.asc">Popularidade (menor)</option>
+                <option value="vote_average.desc">Avaliação (melhor)</option>
+                <option value="vote_average.asc">Avaliação (pior)</option>
+                <option value="primary_release_date.desc">Lançamento (novo)</option>
+                <option value="primary_release_date.asc">Lançamento (antigo)</option>
+                <option value="title.asc">Título (A–Z)</option>
+                <option value="title.desc">Título (Z–A)</option>
+              </select>
+            </span>
+          </span>
+
+          <span class="search_element full">
+            <label for="with_genres" id="with_genres_label">Gêneros</label>
+            <div class="k-widget k-multiselect k-header no_pad k-multiselect-clearable" deselectable="on" title="" style="width: 260px;">
+              <div class="k-multiselect-wrap k-floatwrap" deselectable="on">
+                <ul role="listbox" deselectable="on" class="k-reset" id="with_genres_taglist"></ul>
+                <input class="k-input k-readonly" style="width: 155px;" accesskey="" autocomplete="off" role="listbox"
+                  title="" aria-expanded="false" tabindex="0" aria-owns="with_genres_taglist with_genres_listbox" aria-labelledby="with_genres_label"
+                  aria-disabled="false" aria-activedescendant="7f0f3fb3-6a82-4f36-9ba6-947cb997f192" aria-busy="false">
+                <span deselectable="on" class="k-icon k-clear-value k-i-close k-hidden" title="clear" role="button" tabindex="-1"></span>
+                <span class="k-icon k-i-loading k-hidden"></span>
+              </div>
+              <select id="with_genres" class="no_pad" style="width: 260px; display: none;" name="with_genres[]" multiple="multiple"
+                data-role="multiselect" aria-disabled="false">
+                <option value="16">Animação</option>
+                <option value="12">Aventura</option>
+                <option value="28">Ação</option>
+                <option value="10770">Cinema TV</option>
+                <option value="35">Comédia</option>
+                <option value="80">Crime</option>
+                <option value="99">Documentário</option>
+                <option value="18">Drama</option>
+                <option value="10751">Família</option>
+                <option value="14">Fantasia</option>
+                <option value="37">Faroeste</option>
+                <option value="878">Ficção científica</option>
+                <option value="10752">Guerra</option>
+                <option value="36">História</option>
+                <option value="9648">Mistério</option>
+                <option value="10402">Música</option>
+                <option value="10749">Romance</option>
+                <option value="27">Terror</option>
+                <option value="53">Thriller</option>
+              </select>
+              <span style="font-family:Source Sans Pro, Arial, sans-serif; font-size: 14.4px; font-stretch: 100%; font-style: normal; font-weight: 500; letter-spacing: normal; text-transform: none; line-height: 18.864px; position: absolute; visibility: hidden; top: -3333px; left: -3333px;">Filtrar por gêneros...</span>
+            </div>
+          </span>
+
+          <span class="search_element">
+            <label for="with_keywords" id="with_keywords_label">Palavras-chave</label>
+            <div class="k-widget k-multiselect k-header k-multiselect-clearable" deselectable="on" title="" style="width: 260px;">
+              <div class="k-multiselect-wrap k-floatwrap" deselectable="on">
+                <ul role="listbox" deselectable="on" class="k-reset" id="with_keywords_taglist"></ul>
+                <input class="k-input k-readonly" style="width: 200px;" accesskey="" autocomplete="off" role="listbox"
+                  title="" aria-expanded="false" tabindex="0" aria-owns="with_keywords_taglist with_keywords_listbox" aria-labelledby="with_keywords_label"
+                  aria-disabled="false">
+                <span deselectable="on" class="k-icon k-clear-value k-i-close k-hidden" title="clear" role="button" tabindex="-1"></span>
+                <span class="k-icon k-i-loading k-hidden"></span>
+              </div>
+              <select id="with_keywords" style="width: 260px; display: none;" name="with_keywords[]" multiple="multiple"
+                data-role="multiselect" aria-disabled="false">
+
+              </select>
+              <span style="font-family:Source Sans Pro, Arial, sans-serif; font-size: 14.4px; font-stretch: 100%; font-style: normal; font-weight: 500; letter-spacing: normal; text-transform: none; line-height: 18.864px; position: absolute; visibility: hidden; top: -3333px; left: -3333px;">Filtrar por palavras-chave...</span>
+            </div>
+          </span>
+
+
+
+          <div style="clear: left;"></div>
+        </form>
+
+        <div class="results flex results_poster_card">
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_209112" class="result" href="/movie/209112" title="Batman vs Superman: A Origem da Justiça" alt="Batman vs Superman: A Origem da Justiça">
+
+
+
+                <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/9ORTc9UUTtRq7pssuu5OXNG3W5m.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/9ORTc9UUTtRq7pssuu5OXNG3W5m.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/9ORTc9UUTtRq7pssuu5OXNG3W5m.jpg 2x"
+                  alt="Batman vs Superman: A Origem da Justiça" sizes="185px" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/9ORTc9UUTtRq7pssuu5OXNG3W5m.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/9ORTc9UUTtRq7pssuu5OXNG3W5m.jpg 2x"
+                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/9ORTc9UUTtRq7pssuu5OXNG3W5m.jpg">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_51edf8cf19c295756a1149ed_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 18</p>
+                      <p>Última semana: 25</p>
+                    </div>
+                  </span>
+                  <span id="popularity_51edf8cf19c295756a1149ed" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_209112" class="title result" href="/movie/209112" title="Batman vs Superman: A Origem da Justiça" alt="Batman vs Superman: A Origem da Justiça">Batman vs Superman: A Origem da Justiça</a>
+                <span class="vote_average">5.7
+                  <span id="rating_51edf8cf19c295756a1149ed" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Aventura, Fantasia</span>
+              </p>
+              <p class="overview">Após sua luta contra o general Zod, Metrópolis foi arrasada e o Superman se tornou a figura mais controversa
+                do mundo. Enquanto para muitos ele continua sendo um…</p>
+              <p class="view_more">
+                <a id="movie_209112" class="result" href="/movie/209112" title="Batman vs Superman: A Origem da Justiça" alt="Batman vs Superman: A Origem da Justiça">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_259316" class="result" href="/movie/259316" title="Animais Fantásticos e Onde Habitam" alt="Animais Fantásticos e Onde Habitam">
+
+
+
+                <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/pGjKVOxF8PirC2sXQLXSLh2nD0h.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/pGjKVOxF8PirC2sXQLXSLh2nD0h.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/pGjKVOxF8PirC2sXQLXSLh2nD0h.jpg 2x"
+                  alt="Animais Fantásticos e Onde Habitam" sizes="185px" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/pGjKVOxF8PirC2sXQLXSLh2nD0h.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/pGjKVOxF8PirC2sXQLXSLh2nD0h.jpg 2x"
+                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/pGjKVOxF8PirC2sXQLXSLh2nD0h.jpg">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_53247f559251410c870008fe_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 30</p>
+                      <p>Última semana: 27</p>
+                    </div>
+                  </span>
+                  <span id="popularity_53247f559251410c870008fe" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_259316" class="title result" href="/movie/259316" title="Animais Fantásticos e Onde Habitam" alt="Animais Fantásticos e Onde Habitam">Animais Fantásticos e Onde Habitam</a>
+                <span class="vote_average">7.2
+                  <span id="rating_53247f559251410c870008fe" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Aventura, Família, Fantasia</span>
+              </p>
+              <p class="overview">Baseado no livro homônimo de J.K. Rowling. O excêntrico magizoologista Newt Scamander (Eddie Redmayne) chega
+                à cidade de Nova York com sua maleta, um objeto mágico…</p>
+              <p class="view_more">
+                <a id="movie_259316" class="result" href="/movie/259316" title="Animais Fantásticos e Onde Habitam" alt="Animais Fantásticos e Onde Habitam">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_258489" class="result" href="/movie/258489" title="A Lenda de Tarzan" alt="A Lenda de Tarzan">
+
+
+
+                <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/A1Een3En7pdj835bVNvi2qeReba.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/A1Een3En7pdj835bVNvi2qeReba.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/A1Een3En7pdj835bVNvi2qeReba.jpg 2x"
+                  alt="A Lenda de Tarzan" sizes="185px" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/A1Een3En7pdj835bVNvi2qeReba.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/A1Een3En7pdj835bVNvi2qeReba.jpg 2x"
+                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/A1Een3En7pdj835bVNvi2qeReba.jpg">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_531b5d0b92514177bf0040a0_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 34</p>
+                      <p>Última semana: 47</p>
+                    </div>
+                  </span>
+                  <span id="popularity_531b5d0b92514177bf0040a0" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_258489" class="title result" href="/movie/258489" title="A Lenda de Tarzan" alt="A Lenda de Tarzan">A Lenda de Tarzan</a>
+                <span class="vote_average">5.6
+                  <span id="rating_531b5d0b92514177bf0040a0" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Aventura</span>
+              </p>
+              <p class="overview">Releitura da clássica lenda de Tarzan, na qual um pequeno garoto órfão é criado na selva, e mais tarde tenta
+                se adaptar à vida entre os humanos. Na década de 30…</p>
+              <p class="view_more">
+                <a id="movie_258489" class="result" href="/movie/258489" title="A Lenda de Tarzan" alt="A Lenda de Tarzan">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_269149" class="result" href="/movie/269149" title="Zootopia - Essa Cidade é o Bicho" alt="Zootopia - Essa Cidade é o Bicho">
+
+
+
+                <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/cp9KdbU76GOMUPXBBnINKUHs4ds.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/cp9KdbU76GOMUPXBBnINKUHs4ds.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/cp9KdbU76GOMUPXBBnINKUHs4ds.jpg 2x"
+                  alt="Zootopia - Essa Cidade é o Bicho" sizes="185px" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/cp9KdbU76GOMUPXBBnINKUHs4ds.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/cp9KdbU76GOMUPXBBnINKUHs4ds.jpg 2x"
+                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/cp9KdbU76GOMUPXBBnINKUHs4ds.jpg">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_536e08c40e0a2647d100f93e_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 35</p>
+                      <p>Última semana: 44</p>
+                    </div>
+                  </span>
+                  <span id="popularity_536e08c40e0a2647d100f93e" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_269149" class="title result" href="/movie/269149" title="Zootopia - Essa Cidade é o Bicho" alt="Zootopia - Essa Cidade é o Bicho">Zootopia - Essa Cidade é o Bicho</a>
+                <span class="vote_average">7.7
+                  <span id="rating_536e08c40e0a2647d100f93e" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Animação, Aventura, Família, Comédia</span>
+              </p>
+              <p class="overview">Judy Hopps é a pequena coelha de uma fazenda isolada, filha de agricultores que plantam cenouras há décadas.
+                Mas ela tem sonhos maiores: pretende se mudar para a…</p>
+              <p class="view_more">
+                <a id="movie_269149" class="result" href="/movie/269149" title="Zootopia - Essa Cidade é o Bicho" alt="Zootopia - Essa Cidade é o Bicho">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_396263" class="result" href="/movie/396263" title="Gantz: O" alt="Gantz: O">
+
+
+
+                <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/fF33nRbgvxNgTTPUuNqNsRPYmxZ.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/fF33nRbgvxNgTTPUuNqNsRPYmxZ.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/fF33nRbgvxNgTTPUuNqNsRPYmxZ.jpg 2x"
+                  alt="Gantz: O" sizes="185px" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/fF33nRbgvxNgTTPUuNqNsRPYmxZ.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/fF33nRbgvxNgTTPUuNqNsRPYmxZ.jpg 2x"
+                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/fF33nRbgvxNgTTPUuNqNsRPYmxZ.jpg">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_572c25bc9251416d2d000cdf_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 44</p>
+                      <p>Última semana: 81</p>
+                    </div>
+                  </span>
+                  <span id="popularity_572c25bc9251416d2d000cdf" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_396263" class="title result" href="/movie/396263" title="Gantz: O" alt="Gantz: O">Gantz: O</a>
+                <span class="vote_average">7.1
+                  <span id="rating_572c25bc9251416d2d000cdf" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Animação, Terror, Ficção científica</span>
+              </p>
+              <p class="overview">Masaru Kato morreu em um acidente de carro. Surpreendentemente, ele acorda em um quarto que nunca viu. Lá ele
+                conhece os membros do chamado Time Tokyo, cujo líder…</p>
+              <p class="view_more">
+                <a id="movie_396263" class="result" href="/movie/396263" title="Gantz: O" alt="Gantz: O">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_297761" class="result" href="/movie/297761" title="Esquadrão Suicida" alt="Esquadrão Suicida">
+
+
+
+                <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/5WZKRICCDoFk8aiU3EreUC8OcoI.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/5WZKRICCDoFk8aiU3EreUC8OcoI.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/5WZKRICCDoFk8aiU3EreUC8OcoI.jpg 2x"
+                  alt="Esquadrão Suicida" sizes="185px" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/5WZKRICCDoFk8aiU3EreUC8OcoI.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/5WZKRICCDoFk8aiU3EreUC8OcoI.jpg 2x"
+                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/5WZKRICCDoFk8aiU3EreUC8OcoI.jpg">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_543ff1520e0a2651dc0003fa_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 47</p>
+                      <p>Última semana: 294</p>
+                    </div>
+                  </span>
+                  <span id="popularity_543ff1520e0a2651dc0003fa" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_297761" class="title result" href="/movie/297761" title="Esquadrão Suicida" alt="Esquadrão Suicida">Esquadrão Suicida</a>
+                <span class="vote_average">5.9
+                  <span id="rating_543ff1520e0a2651dc0003fa" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Aventura, Crime, Fantasia, Ficção científica</span>
+              </p>
+              <p class="overview">Reúna um time com os mais perigosos Supervilões já encarcerados, forneça a eles o mais poderoso arsenal à disposição
+                do governo e os envie em uma missão para derrotar…</p>
+              <p class="view_more">
+                <a id="movie_297761" class="result" href="/movie/297761" title="Esquadrão Suicida" alt="Esquadrão Suicida">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_283366" class="result" href="/movie/283366" title="O Lar das Crianças Peculiares" alt="O Lar das Crianças Peculiares">
+
+
+
+                <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/lniYkYMl5muRKetXM7LNyXEKrHG.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/lniYkYMl5muRKetXM7LNyXEKrHG.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/lniYkYMl5muRKetXM7LNyXEKrHG.jpg 2x"
+                  alt="O Lar das Crianças Peculiares" sizes="185px" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/lniYkYMl5muRKetXM7LNyXEKrHG.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/lniYkYMl5muRKetXM7LNyXEKrHG.jpg 2x"
+                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/lniYkYMl5muRKetXM7LNyXEKrHG.jpg">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_53cfdd4f0e0a265df3009a2f_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 56</p>
+                      <p>Última semana: 41</p>
+                    </div>
+                  </span>
+                  <span id="popularity_53cfdd4f0e0a265df3009a2f" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_283366" class="title result" href="/movie/283366" title="O Lar das Crianças Peculiares" alt="O Lar das Crianças Peculiares">O Lar das Crianças Peculiares</a>
+                <span class="vote_average">6.6
+                  <span id="rating_53cfdd4f0e0a265df3009a2f" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Drama, Fantasia, Aventura</span>
+              </p>
+              <p class="overview">Após a estranha morte de seu avô (Terence Stamp), o jovem Jake (Asa Butterfield) parte com seu pai para o País
+                de Gales. Lá ele pretende encontrar a srta. Peregrine…</p>
+              <p class="view_more">
+                <a id="movie_283366" class="result" href="/movie/283366" title="O Lar das Crianças Peculiares" alt="O Lar das Crianças Peculiares">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_341006" class="result" href="/movie/341006" title="Dia de Trabalho Mortal" alt="Dia de Trabalho Mortal">
+
+
+
+                <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/faJK0dP3S92kQoKtO4LZMjy41kf.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/faJK0dP3S92kQoKtO4LZMjy41kf.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/faJK0dP3S92kQoKtO4LZMjy41kf.jpg 2x"
+                  alt="Dia de Trabalho Mortal" sizes="185px" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/faJK0dP3S92kQoKtO4LZMjy41kf.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/faJK0dP3S92kQoKtO4LZMjy41kf.jpg 2x"
+                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/faJK0dP3S92kQoKtO4LZMjy41kf.jpg">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_555d9ec19251411bdb000029_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 61</p>
+                      <p>Última semana: 70</p>
+                    </div>
+                  </span>
+                  <span id="popularity_555d9ec19251411bdb000029" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_341006" class="title result" href="/movie/341006" title="Dia de Trabalho Mortal" alt="Dia de Trabalho Mortal">Dia de Trabalho Mortal</a>
+                <span class="vote_average">6.2
+                  <span id="rating_555d9ec19251411bdb000029" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Terror, Thriller</span>
+              </p>
+              <p class="overview">Tudo corria bem nas Indústrias Belko, mais um dia normal de trabalho. No entanto, tudo muda repentinamente
+                para os funcionários da empresa quando eles descobrem…</p>
+              <p class="view_more">
+                <a id="movie_341006" class="result" href="/movie/341006" title="Dia de Trabalho Mortal" alt="Dia de Trabalho Mortal">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_375794" class="result" href="/movie/375794" title="No manches Frida" alt="No manches Frida">
+
+
+
+                <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/ld6WsaJKRwLzqPCulRo24XZDtuL.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/ld6WsaJKRwLzqPCulRo24XZDtuL.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/ld6WsaJKRwLzqPCulRo24XZDtuL.jpg 2x"
+                  alt="No manches Frida" sizes="136px" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/ld6WsaJKRwLzqPCulRo24XZDtuL.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/ld6WsaJKRwLzqPCulRo24XZDtuL.jpg 2x"
+                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/ld6WsaJKRwLzqPCulRo24XZDtuL.jpg">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_56899ca99251417c0600038a_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 71</p>
+                      <p>Última semana: 552</p>
+                    </div>
+                  </span>
+                  <span id="popularity_56899ca99251417c0600038a" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_375794" class="title result" href="/movie/375794" title="No manches Frida" alt="No manches Frida">No manches Frida</a>
+                <span class="vote_average">7.4
+                  <span id="rating_56899ca99251417c0600038a" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Comédia</span>
+              </p>
+              <p class="overview">Não temos uma sinopse em Português do Brasil. Você pode ajudar a ampliar o nosso banco de dados adicionando
+                uma.</p>
+              <p class="view_more">
+                <a id="movie_375794" class="result" href="/movie/375794" title="No manches Frida" alt="No manches Frida">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_293660" class="result" href="/movie/293660" title="Deadpool" alt="Deadpool">
+
+
+
+                <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/g0ehjmoNsgH9RmlGiAfYzN2whps.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/g0ehjmoNsgH9RmlGiAfYzN2whps.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/g0ehjmoNsgH9RmlGiAfYzN2whps.jpg 2x"
+                  alt="Deadpool" sizes="81px" srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/g0ehjmoNsgH9RmlGiAfYzN2whps.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/g0ehjmoNsgH9RmlGiAfYzN2whps.jpg 2x"
+                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/g0ehjmoNsgH9RmlGiAfYzN2whps.jpg">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_541bec430e0a2638e7000e99_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 72</p>
+                      <p>Última semana: 298</p>
+                    </div>
+                  </span>
+                  <span id="popularity_541bec430e0a2638e7000e99" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_293660" class="title result" href="/movie/293660" title="Deadpool" alt="Deadpool">Deadpool</a>
+                <span class="vote_average">7.5
+                  <span id="rating_541bec430e0a2638e7000e99" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Aventura, Comédia</span>
+              </p>
+              <p class="overview">Baseado no anti-herói não convencional da Marvel Comics, Deadpool conta a história da origem do ex-agente das
+                Forças Especiais que se tornou o mercenário Wade Wilson.…</p>
+              <p class="view_more">
+                <a id="movie_293660" class="result" href="/movie/293660" title="Deadpool" alt="Deadpool">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_316727" class="result" href="/movie/316727" title="12 Horas Para Sobreviver - O Ano da Eleição" alt="12 Horas Para Sobreviver - O Ano da Eleição">
+
+
+
+                <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wNoWyYq8wEWziUSM7PAOp5y7Cin.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wNoWyYq8wEWziUSM7PAOp5y7Cin.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/wNoWyYq8wEWziUSM7PAOp5y7Cin.jpg 2x"
+                  alt="12 Horas Para Sobreviver - O Ano da Eleição">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_54b049b1925141746c0003d6_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 80</p>
+                      <p>Última semana: 86</p>
+                    </div>
+                  </span>
+                  <span id="popularity_54b049b1925141746c0003d6" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_316727" class="title result" href="/movie/316727" title="12 Horas Para Sobreviver - O Ano da Eleição" alt="12 Horas Para Sobreviver - O Ano da Eleição">12 Horas Para Sobreviver - O Ano da Eleição</a>
+                <span class="vote_average">6.1
+                  <span id="rating_54b049b1925141746c0003d6" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Terror, Thriller</span>
+              </p>
+              <p class="overview">Após a conclusão de Uma Noite de Crime 2, o policial Barnes (Frank Grillo) se tornou o principal responsável
+                pela segurança da senadora Charlene Roan (Elizabeth…</p>
+              <p class="view_more">
+                <a id="movie_316727" class="result" href="/movie/316727" title="12 Horas Para Sobreviver - O Ano da Eleição"
+                  alt="12 Horas Para Sobreviver - O Ano da Eleição">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_394823" class="result" href="/movie/394823" title="Robbi, Tobbi und das Fliewatüüt" alt="Robbi, Tobbi und das Fliewatüüt">
+
+
+
+                <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/ssCEE0bfj5gawzwZeGfqrGQtU3f.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/ssCEE0bfj5gawzwZeGfqrGQtU3f.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/ssCEE0bfj5gawzwZeGfqrGQtU3f.jpg 2x"
+                  alt="Robbi, Tobbi und das Fliewatüüt">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_5720cf26c3a368119a000145_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 81</p>
+                      <p>Última semana: 676</p>
+                    </div>
+                  </span>
+                  <span id="popularity_5720cf26c3a368119a000145" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_394823" class="title result" href="/movie/394823" title="Robbi, Tobbi und das Fliewatüüt" alt="Robbi, Tobbi und das Fliewatüüt">Robbi, Tobbi und das Fliewatüüt</a>
+                <span class="vote_average">8.0
+                  <span id="rating_5720cf26c3a368119a000145" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Aventura, Família</span>
+              </p>
+              <p class="overview">Não temos uma sinopse em Português do Brasil. Você pode ajudar a ampliar o nosso banco de dados adicionando
+                uma.</p>
+              <p class="view_more">
+                <a id="movie_394823" class="result" href="/movie/394823" title="Robbi, Tobbi und das Fliewatüüt" alt="Robbi, Tobbi und das Fliewatüüt">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_403964" class="result" href="/movie/403964" title="Palhaços Infernais" alt="Palhaços Infernais">
+
+
+
+                <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/fzUleSDXVEvRso2jBiuSbrszpl0.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/fzUleSDXVEvRso2jBiuSbrszpl0.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/fzUleSDXVEvRso2jBiuSbrszpl0.jpg 2x"
+                  alt="Palhaços Infernais">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_57711af39251411fb1000f42_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 117</p>
+                      <p>Última semana: 890</p>
+                    </div>
+                  </span>
+                  <span id="popularity_57711af39251411fb1000f42" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_403964" class="title result" href="/movie/403964" title="Palhaços Infernais" alt="Palhaços Infernais">Palhaços Infernais</a>
+                <span class="vote_average">4.7
+                  <span id="rating_57711af39251411fb1000f42" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Terror, Thriller</span>
+              </p>
+              <p class="overview">Durante uma viagem rumo a um festival de música, um grupo de amigos se perde no que parece ser uma cidade abandonada
+                e acabam por cruzar o caminho de um grupo de…</p>
+              <p class="view_more">
+                <a id="movie_403964" class="result" href="/movie/403964" title="Palhaços Infernais" alt="Palhaços Infernais">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_360365" class="result" href="/movie/360365" title="Tini: Depois de Violetta" alt="Tini: Depois de Violetta">
+
+
+
+                <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/aEwFHNqjY3lybaBkQVDkeo8yuAy.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/aEwFHNqjY3lybaBkQVDkeo8yuAy.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/aEwFHNqjY3lybaBkQVDkeo8yuAy.jpg 2x"
+                  alt="Tini: Depois de Violetta">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_55fc32109251413d5c00280d_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 119</p>
+                      <p>Última semana: 543</p>
+                    </div>
+                  </span>
+                  <span id="popularity_55fc32109251413d5c00280d" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_360365" class="title result" href="/movie/360365" title="Tini: Depois de Violetta" alt="Tini: Depois de Violetta">Tini: Depois de Violetta</a>
+                <span class="vote_average">7.0
+                  <span id="rating_55fc32109251413d5c00280d" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Comédia, Drama, Música</span>
+              </p>
+              <p class="overview">Inspirado na aclamada série do Disney Channel, o filme narra o crescimento de Tini e seu amadurecimento profissional
+                após os acontecimentos do fenômeno televisivo…</p>
+              <p class="view_more">
+                <a id="movie_360365" class="result" href="/movie/360365" title="Tini: Depois de Violetta" alt="Tini: Depois de Violetta">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_351339" class="result" href="/movie/351339" title="Operação Antropoide" alt="Operação Antropoide">
+
+
+
+                <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/egWtIihm9ICfPRPi3LZIjLvADMF.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/egWtIihm9ICfPRPi3LZIjLvADMF.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/egWtIihm9ICfPRPi3LZIjLvADMF.jpg 2x"
+                  alt="Operação Antropoide">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_55b296dac3a368648e00f456_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 139</p>
+                      <p>Última semana: 212</p>
+                    </div>
+                  </span>
+                  <span id="popularity_55b296dac3a368648e00f456" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_351339" class="title result" href="/movie/351339" title="Operação Antropoide" alt="Operação Antropoide">Operação Antropoide</a>
+                <span class="vote_average">6.9
+                  <span id="rating_55b296dac3a368648e00f456" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">História, Thriller, Guerra</span>
+              </p>
+              <p class="overview">Baseado em um dos grandes eventos da Segunda Guerra Mundial, a Operação Antropoid, que visava matar o general
+                Heydrich, que era protetor do reich. Terceiro homem…</p>
+              <p class="view_more">
+                <a id="movie_351339" class="result" href="/movie/351339" title="Operação Antropoide" alt="Operação Antropoide">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_408268" class="result" href="/movie/408268" title="No Estamos Solos" alt="No Estamos Solos">
+
+
+
+                <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/kcAqHoJzIzNwS0OqcuWoFQWj8Wg.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/kcAqHoJzIzNwS0OqcuWoFQWj8Wg.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/kcAqHoJzIzNwS0OqcuWoFQWj8Wg.jpg 2x"
+                  alt="No Estamos Solos">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_5797f94ac3a36828e7003d35_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 142</p>
+                      <p>Última semana: 78</p>
+                    </div>
+                  </span>
+                  <span id="popularity_5797f94ac3a36828e7003d35" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_408268" class="title result" href="/movie/408268" title="No Estamos Solos" alt="No Estamos Solos">No Estamos Solos</a>
+                <span class="vote_average">6.1
+                  <span id="rating_5797f94ac3a36828e7003d35" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Terror, Thriller</span>
+              </p>
+              <p class="overview">Não temos uma sinopse em Português do Brasil. Você pode ajudar a ampliar o nosso banco de dados adicionando
+                uma.</p>
+              <p class="view_more">
+                <a id="movie_408268" class="result" href="/movie/408268" title="No Estamos Solos" alt="No Estamos Solos">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_47933" class="result" href="/movie/47933" title="Independence Day: O Ressurgimento" alt="Independence Day: O Ressurgimento">
+
+
+
+                <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/8ELbJ6YIOmCdFM0tPDgve3uXLTM.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/8ELbJ6YIOmCdFM0tPDgve3uXLTM.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/8ELbJ6YIOmCdFM0tPDgve3uXLTM.jpg 2x"
+                  alt="Independence Day: O Ressurgimento">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_4cc1c04d7b9aa138d9001a3b_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 152</p>
+                      <p>Última semana: 179</p>
+                    </div>
+                  </span>
+                  <span id="popularity_4cc1c04d7b9aa138d9001a3b" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_47933" class="title result" href="/movie/47933" title="Independence Day: O Ressurgimento" alt="Independence Day: O Ressurgimento">Independence Day: O Ressurgimento</a>
+                <span class="vote_average">5.0
+                  <span id="rating_4cc1c04d7b9aa138d9001a3b" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Aventura, Ficção científica</span>
+              </p>
+              <p class="overview">Após o devastador ataque alienígena ocorrido em 1996, todas as nações da Terra se uniram para combater os extra-terrestres,
+                caso eles retornassem. Para tanto são…</p>
+              <p class="view_more">
+                <a id="movie_47933" class="result" href="/movie/47933" title="Independence Day: O Ressurgimento" alt="Independence Day: O Ressurgimento">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_330459" class="result" href="/movie/330459" title="Rogue One: Uma História Star Wars" alt="Rogue One: Uma História Star Wars">
+
+
+
+                <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/bETiNTuEdSCdIqlPaWM5HHt2pqg.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/bETiNTuEdSCdIqlPaWM5HHt2pqg.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/bETiNTuEdSCdIqlPaWM5HHt2pqg.jpg 2x"
+                  alt="Rogue One: Uma História Star Wars">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_550310c8925141282f003dca_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 174</p>
+                      <p>Última semana: 271</p>
+                    </div>
+                  </span>
+                  <span id="popularity_550310c8925141282f003dca" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_330459" class="title result" href="/movie/330459" title="Rogue One: Uma História Star Wars" alt="Rogue One: Uma História Star Wars">Rogue One: Uma História Star Wars</a>
+                <span class="vote_average">7.4
+                  <span id="rating_550310c8925141282f003dca" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Aventura, Ficção científica</span>
+              </p>
+              <p class="overview">Ainda criança, Jyn Erso (Felicity Jones) foi afastada de seu pai, Galen (Mads Mikkelsen), devido à exigência
+                do diretor Krennic (Ben Mendelsohn) que ele trabalhasse…</p>
+              <p class="view_more">
+                <a id="movie_330459" class="result" href="/movie/330459" title="Rogue One: Uma História Star Wars" alt="Rogue One: Uma História Star Wars">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_396535" class="result" href="/movie/396535" title="Invasão Zumbi" alt="Invasão Zumbi">
+
+
+
+                <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/6hlO4E9TJCrhHBzvrbmlvrP6r6p.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/6hlO4E9TJCrhHBzvrbmlvrP6r6p.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/6hlO4E9TJCrhHBzvrbmlvrP6r6p.jpg 2x"
+                  alt="Invasão Zumbi">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_572f1a56c3a3687cc900051f_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 184</p>
+                      <p>Última semana: 1182</p>
+                    </div>
+                  </span>
+                  <span id="popularity_572f1a56c3a3687cc900051f" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_396535" class="title result" href="/movie/396535" title="Invasão Zumbi" alt="Invasão Zumbi">Invasão Zumbi</a>
+                <span class="vote_average">7.7
+                  <span id="rating_572f1a56c3a3687cc900051f" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Terror, Thriller</span>
+              </p>
+              <p class="overview">Em um trem de alta velocidade com destino à cidade de Busan, um vírus que transforma as pessoas em zumbis,
+                se espalha. A cidade conseguiu com sucesso defender a…</p>
+              <p class="view_more">
+                <a id="movie_396535" class="result" href="/movie/396535" title="Invasão Zumbi" alt="Invasão Zumbi">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="item poster card">
+            <div class="image_content">
+              <a id="movie_121856" class="result" href="/movie/121856" title="Assassin's Creed - O Filme" alt="Assassin's Creed - O Filme">
+
+
+
+                <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/rjNZaXvpG64Nin3XPbuhmiDq0N2.jpg"
+                  data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/rjNZaXvpG64Nin3XPbuhmiDq0N2.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/rjNZaXvpG64Nin3XPbuhmiDq0N2.jpg 2x"
+                  alt="Assassin's Creed - O Filme">
+
+
+
+
+                <div class="meta" data-role="tooltip">
+                  <span id="popularity_50105c0219c2952e0b000572_value" class="hide popularity_rank_value">
+                    <div class="tooltip_popup popularity">
+                      <h3>Placar de popularidade</h3>
+                      <p>Hoje: 198</p>
+                      <p>Última semana: 173</p>
+                    </div>
+                  </span>
+                  <span id="popularity_50105c0219c2952e0b000572" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+                  <span class="right">
+
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="info">
+              <p class="flex">
+                <a id="movie_121856" class="title result" href="/movie/121856" title="Assassin's Creed - O Filme" alt="Assassin's Creed - O Filme">Assassin's Creed - O Filme</a>
+                <span class="vote_average">5.4
+                  <span id="rating_50105c0219c2952e0b000572" class="glyphicons glyphicons-star x1 rating movie"></span>
+                </span>
+              </p>
+              <p class="meta flex">
+                <span class="release_date">
+                  <span class="glyphicons glyphicons-calendar x1"></span> 2016</span>
+                <span class="genres">Ação, Aventura, Ficção científica</span>
+              </p>
+              <p class="overview">Por meio de uma tecnologia revolucionária que destrava suas memórias genéticas, Callum Lynch (Michael Fassbender)
+                experimenta as aventuras de seu ancestral, Aguilar…</p>
+              <p class="view_more">
+                <a id="movie_121856" class="result" href="/movie/121856" title="Assassin's Creed - O Filme" alt="Assassin's Creed - O Filme">Mais informações</a>
+              </p>
+            </div>
+          </div>
+
+
+
+          <div class="pagination">
+            <p class="left">Atualmente na página: 1 of 646
+              <span class="total_results grey">(12,915 resultados)</span>
+            </p>
+
+            <p class="right pagination">
+              <a href="/discover/movie?page=2&amp;media_type=movie">
+                <span class="glyphicons glyphicons-circle-arrow-right x1"></span>
+              </a>
+            </p>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<app-footer></app-footer>
