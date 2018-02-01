@@ -1,0 +1,59 @@
+<div class="item poster card">
+  <div class="image_content">
+    <a id="movie_{{movie.id}}" class="result" [routerLink]="['movies', movie.id]" title="{{movie.title}}">
+      <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" 
+      data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.backdropPath}}"
+      data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.backdropPath}} 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie.backdropPath}} 2x"
+       
+      sizes="185px" 
+      srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.backdropPath}} 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie.backdropPath}} 2x"
+      src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{movie.backdropPath}}">
+
+      <div class="meta" data-role="tooltip">
+        <span id="popularity_51edf8cf19c295756a1149ed_value" class="hide popularity_rank_value">
+          <div class="tooltip_popup popularity">
+            <h3>Placar de popularidade</h3>
+            <p>Hoje: 18</p>
+            <p>Última semana: 25</p>
+          </div>
+        </span>
+        <span id="popularity_51edf8cf19c295756a1149ed" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+        <span class="right">
+
+        </span>
+      </div>
+    </a>
+  </div>
+  <div class="info">
+      <!-- <div class="wrapper">
+          <div class="consensus tight">
+            <div class="outer_ring">
+              <div class="user_score_chart 558e8490925141579e003923" data-percent="71.0" data-track-color="#204529" data-bar-color="#21d07a">
+                <div class="percent">
+                    <span class="icon icon-r71"></span>
+                </div>
+              <canvas height="32" width="32"></canvas></div>
+            </div>
+          </div>
+          <div class="flex">
+            <a id="movie_346364" class="title result" href="/movie/346364" title="It: A Coisa" alt="It: A Coisa">It: A Coisa</a>
+            <span> 5 de Setembro de 2017</span>
+          </div>
+        </div> -->
+    <p class="flex">
+      <a id="movie_{{movie.id}}" class="title result" [routerLink]="['movies', movie.id]" title="{{movie.title}}" >{{movie.title}}</a>
+      <span class="vote_average">{{movie.voteAverage}}
+        <span id="rating_51edf8cf19c295756a1149ed" class="glyphicons glyphicons-star x1 rating movie"></span>
+      </span>
+    </p>
+    <p class="meta flex">
+      <span class="release_date">
+        <span class="glyphicons glyphicons-calendar x1"></span> {{movie.releaseYear}}</span>
+      <span class="genres">Ação, Aventura, Fantasia</span>
+    </p>
+    <p class="overview">{{movie.overview | slice:0:250}}...</p>
+    <p class="view_more">
+      <a id="movie_{{movie.id}}" class="result" [routerLink]="['movies', movie.id]"title="{{movie.title}}" >Mais informações</a>
+    </p>
+  </div>
+</div>

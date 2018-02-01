@@ -1,0 +1,893 @@
+<section class="inner_content movie_content backdrop poster">
+
+  <div class="header large border first lazyloaded">
+    <div class="custom_bg">
+      <div class="single_column">
+        <section class="images inner">
+          <div class="poster">
+            <div class="image_content">
+              <img class="poster" 
+              src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}}" 
+              srcset="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}} 2x"
+              >
+            </div>
+            <div class="zoom">
+              <a>
+                <span class="glyphicons glyphicons-zoom-in x1"></span> Expandir</a>
+            </div>
+          </div>
+          <div class="header_poster_wrapper">
+            <section class="header poster">
+              <div class="title" dir="auto">
+
+                <span>
+                  <a href="/movie/245891-john-wick">
+                    <h2 class="27">{{movieDetail.title}}</h2>
+                  </a>
+                  <span class="release_date">{{movieDetail.releaseYear}}</span>
+                </span>
+
+              </div>
+              <ul class="auto actions">
+
+                <li class="chart">
+                  <div class="consensus">
+                    <div class="outer_ring">
+                      <div class="user_score_chart" data-percent="70.0" data-track-color="#204529" data-bar-color="#21d07a">
+                        <div class="percent">
+
+                          <span class="icon icon-r70"></span>
+
+                        </div>
+                        <canvas height="60" width="60"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text">Avaliação
+                    <br>dos
+                    <br>usuários</div>
+                </li>
+
+                <li class="tooltip use_tooltip" title="Entre com uma conta para criar e editar listas" data-role="tooltip">
+                  <a class="no_click" href="#">
+                    <span class="glyphicons glyphicons-list x1"></span>
+                  </a>
+                </li>
+
+
+                <li class="use_tooltip tooltip" title="Entre com uma conta para adicionar este filme aos seus favoritos" data-role="tooltip">
+                  <a id="favourite" class="no_click add_to_account_list favourite false" href="#">
+                    <span class="glyphicons glyphicons-heart x1"></span>
+                  </a>
+                </li>
+
+
+                <li class="use_tooltip tooltip" title="Entre com uma conta para adicionar este filme à sua lista de interesses" data-role="tooltip">
+                  <a id="watchlist" class="no_click add_to_account_list watchlist false" href="#">
+                    <span class="glyphicons glyphicons-bookmark x1"></span>
+                  </a>
+                </li>
+
+
+                <li class="tooltip use_tooltip rating" title="Entre com uma conta para avaliar este filme" data-role="tooltip">
+                  <a id="rate_it" class="no_click rating false" href="#">
+                    <span class="glyphicons glyphicons-star x1"></span>
+                  </a>
+                </li>
+                <li class="video none">
+                  <a class="no_click play_trailer" href="#" data-id="rUKOAwlyNag">
+                    <span class="glyphicons glyphicons-play"></span> Reproduzir trailer</a>
+                </li>
+              </ul>
+
+              <div class="header_info">
+                <h3 dir="auto">Sinopse</h3>
+                <div class="overview" dir="auto">
+                  <p>{{movieDetail.overview}}</p>
+                </div>
+
+                <h3 class="featured" dir="auto">Equipe técnica principal</h3>
+                <ol class="people no_image">
+
+                  <!-- suscetivel a erro -->
+                  <li *ngFor="let profile of movieDetail.crew.slice(0, 3)" class="profile">
+                    <p>
+                      <a href="/person/{{profile.id}}">{{profile.name}}</a>
+                    </p>
+                    <p class="character">{{profile.job}}</p>
+                  </li>
+                  <li class="profile"></li>
+                  <li class="profile"></li>
+                  <li class="profile"></li>
+                </ol>
+              </div>
+            </section>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="media_v4" class="media movie_v4 header_large">
+    <div class="content_wrapper full_width bottom_border">
+      <ul class="shortcut_bar">
+        <li>
+          <a class="" href="/movie/{{movieDetail.id}}/discuss" title="Discussões">Discussões</a>
+        </li>
+        <li class="">
+          <a class="" href="/movie/{{movieDetail.id}}/reviews" title="Resenhas">Resenhas</a>
+        </li>
+        <li class="">
+          <a class="" href="/movie/{{movieDetail.id}}/videos" title="Vídeos">Vídeos</a>
+        </li>
+        <li class="">
+          <a class="" href="/movie/{{movieDetail.id}}/images/posters" title="Imagens">Imagens</a>
+        </li>
+        <li class="">
+          <a class="" href="/movie/{{movieDetail.id}}/changes" title="Alterações">Alterações</a>
+        </li>
+        <li>
+          <a class="no_click report" window="movie" href="#" title="Relatório">Relatório</a>
+        </li>
+        <li>
+          <a id="share" class="no_click" href="#" title="Compartilhar">Compartilhar</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="column_wrapper">
+
+      <div>
+        <div class="white_column">
+
+          <div>
+            <section class="panel top_billed scroller">
+              <h3 dir="auto">Elenco principal</h3>
+              <ol class="people scroller">
+                  <!-- suscetivel a erro -->
+                <li *ngFor="let person of movieDetail.mainCast.slice(0,5)" class="card">
+                  <a href="/person/{{person.id}}">
+                    <img class="profile fade lazyautosizes lazyloaded" data-sizes="auto" 
+                    data-src="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}}"
+                      data-srcset="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}} 1x, https://image.tmdb.org/t/p/w276_and_h350_face{{person.profile_path}} 2x"
+                      alt="Keanu Reeves" sizes="138px" 
+                      srcset="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}} 1x, https://image.tmdb.org/t/p/w276_and_h350_face{{person.profile_path}} 2x"
+                      src="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}}">
+                  </a>
+                  <p>
+                    <a href="/person/{{person.id}}">{{person.name}}</a>
+                  </p>
+                  <p class="character">{{person.character}}</p>
+                </li>
+              </ol>
+
+              <p class="new_button">
+                <a class="" href="/movie/{{movieDetail.id}}/cast">Elenco e equipe técnica completos</a>
+              </p>
+            </section>
+
+            <section class="panel media_panel social_panel">
+              <section class="review">
+                <div class="menu">
+                  <h3 dir="auto">Social</h3>
+                  <ul>
+                    <li class="" dir="auto">
+                      <a id="reviews" class="media_panel" href="#">Resenhas
+                        <span>0</span>
+                      </a>
+                    </li>
+                    <li class="active" dir="auto">
+                      <a id="discussions" class="media_panel" href="#">Discussões
+                        <span>9</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="content">
+
+                  <div class="original_content">
+                    <div class="discussion_container">
+                      <table class="new space">
+                        <thead>
+                          <tr>
+                            <th>Assunto</th>
+                            <th>Situação</th>
+                            <th>Respostas</th>
+                            <th>Resposta mais recente</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="open">
+                            <td class="subject">
+                              <div class="post_info">
+
+                                <span class="avatar thirty-two">
+                                  <a href="/account/JarekReanimated" alt="Discussion started by JarekReanimated">
+
+                                    <img class="avatar fade lazyloaded" data-src="https://image.tmdb.org/t/p/w32_and_h32_face/ewsUKo55A5qjTpHJAHMQfKIXeyV.jpg"
+                                      data-srcset="https://image.tmdb.org/t/p/w32_and_h32_face/ewsUKo55A5qjTpHJAHMQfKIXeyV.jpg 1x, https://image.tmdb.org/t/p/w64_and_h64_face/ewsUKo55A5qjTpHJAHMQfKIXeyV.jpg 2x"
+                                      width="32" height="32" srcset="https://image.tmdb.org/t/p/w32_and_h32_face/ewsUKo55A5qjTpHJAHMQfKIXeyV.jpg 1x, https://image.tmdb.org/t/p/w64_and_h64_face/ewsUKo55A5qjTpHJAHMQfKIXeyV.jpg 2x"
+                                      src="https://image.tmdb.org/t/p/w32_and_h32_face/ewsUKo55A5qjTpHJAHMQfKIXeyV.jpg">
+
+                                  </a>
+                                </span>
+                                <a class="topic" href="/movie/245891-john-wick/discuss/5a5afad60e0a267fe6019ea0">Decent until the church scene (spoilers)</a>
+                              </div>
+
+
+                            </td>
+                            <td>
+                              <p class="status">Aberta</p>
+                            </td>
+                            <td>
+                              <p>0</p>
+                            </td>
+                            <td>
+                              <p>
+
+                                14 de Jan de 2018 às 1:38AM
+                                <br>por JarekReanimated
+
+                              </p>
+                            </td>
+                          </tr>
+
+                          <tr class="open">
+                            <td class="subject">
+                              <div class="post_info">
+
+                                <span class="avatar thirty-two">
+                                  <a href="/account/intothenightalone" alt="Discussion started by intothenightalone">
+
+                                    <img class="avatar fade lazyloaded" data-src="https://image.tmdb.org/t/p/w32_and_h32_face/2NrNXXlmi9iiN5FyRDvD6viiyKO.jpg"
+                                      data-srcset="https://image.tmdb.org/t/p/w32_and_h32_face/2NrNXXlmi9iiN5FyRDvD6viiyKO.jpg 1x, https://image.tmdb.org/t/p/w64_and_h64_face/2NrNXXlmi9iiN5FyRDvD6viiyKO.jpg 2x"
+                                      width="32" height="32" srcset="https://image.tmdb.org/t/p/w32_and_h32_face/2NrNXXlmi9iiN5FyRDvD6viiyKO.jpg 1x, https://image.tmdb.org/t/p/w64_and_h64_face/2NrNXXlmi9iiN5FyRDvD6viiyKO.jpg 2x"
+                                      src="https://image.tmdb.org/t/p/w32_and_h32_face/2NrNXXlmi9iiN5FyRDvD6viiyKO.jpg">
+
+                                  </a>
+                                </span>
+
+
+
+
+                                <a class="topic" href="/movie/245891-john-wick/discuss/59d19a6dc3a36878c9030025">Sleeping on a bed with an open window across from rooftop</a>
+
+                              </div>
+
+
+                            </td>
+                            <td>
+                              <p class="status">Aberta</p>
+                            </td>
+                            <td>
+                              <p>5</p>
+                            </td>
+                            <td>
+                              <p>
+
+                                11 de Out de 2017 às 2:27PM
+                                <br>por
+                                <span class="username">
+                                  <a href="/movie/245891-john-wick/discuss/59d19a6dc3a36878c9030025?page=1#59de62a1c3a36862270894e9">Renovatio</a>
+                                </span>
+
+                              </p>
+                            </td>
+                          </tr>
+
+                          <tr class="open">
+                            <td class="subject">
+                              <div class="post_info">
+
+                                <span class="avatar thirty-two">
+                                  <a href="/account/MarcoTheMolester" alt="Discussion started by MarcoTheMolester">
+
+                                    <img class="avatar fade lazyloaded" data-src="https://image.tmdb.org/t/p/w32_and_h32_face/2N9LQIPEXHEQfpb5nto2VaH6R17.jpg"
+                                      data-srcset="https://image.tmdb.org/t/p/w32_and_h32_face/2N9LQIPEXHEQfpb5nto2VaH6R17.jpg 1x, https://image.tmdb.org/t/p/w64_and_h64_face/2N9LQIPEXHEQfpb5nto2VaH6R17.jpg 2x"
+                                      width="32" height="32" srcset="https://image.tmdb.org/t/p/w32_and_h32_face/2N9LQIPEXHEQfpb5nto2VaH6R17.jpg 1x, https://image.tmdb.org/t/p/w64_and_h64_face/2N9LQIPEXHEQfpb5nto2VaH6R17.jpg 2x"
+                                      src="https://image.tmdb.org/t/p/w32_and_h32_face/2N9LQIPEXHEQfpb5nto2VaH6R17.jpg">
+
+                                  </a>
+                                </span>
+
+
+
+
+                                <a class="topic" href="/movie/245891-john-wick/discuss/58b3056c92514177b8005c8c">Who is John Wick?</a>
+
+                              </div>
+
+
+                            </td>
+                            <td>
+                              <p class="status">Aberta</p>
+                            </td>
+                            <td>
+                              <p>5</p>
+                            </td>
+                            <td>
+                              <p>
+
+                                15 de Jun de 2017 às 12:02AM
+                                <br>por
+                                <span class="username">
+                                  <a href="/movie/245891-john-wick/discuss/58b3056c92514177b8005c8c?page=1#594206e59251417fb0001ee9">Dark_Sithlord</a>
+                                </span>
+
+                              </p>
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+
+                      <p class="new_button">
+                        <a class="" href="/movie/245891-john-wick/discuss">Ir para as discussões</a>
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+            </section>
+
+            <section class="panel media_panel media scroller">
+
+              <div class="menu">
+                <h3 dir="auto">Mídia</h3>
+                <ul>
+                  <li class="active" dir="auto">
+                    <a id="popular" class="media_panel" >Mais popular</a>
+                  </li>
+                  <li dir="auto">
+                    <a id="videos" class="media_panel">Vídeos
+                      <!-- <span>{{movideDetail.videos.length}}</span> -->
+                    </a>
+                  </li>
+                  <li dir="auto">
+                    <a id="backdrops" class="media_panel" href="#">Imagens de fundo
+                      <!-- <span>{{movideDetail.images.backdrops.length}}</span> -->
+                    </a>
+                  </li>
+                  <li dir="auto">
+                    <a id="posters" class="media_panel" href="#">Pôsteres
+                      <!-- <span>{{movideDetail.images.posters.length}}</span> -->
+                    </a>
+                  </li>
+                  <li class="view_all"></li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="original_content">
+
+                  <div class="video">
+                    <iframe class=" lazyloaded" type="text/html" width="533" height="300" data-src="//www.youtube.com/embed/rUKOAwlyNag?enablejsapi=1&amp;autoplay=0&amp;origin=https%3A%2F%2Fwww.themoviedb.org&amp;hl=pt-BR&amp;modestbranding=1&amp;fs=1"
+                      frameborder="0" allowfullscreen=""></iframe>
+                  </div>
+                  <div class="backdrop">
+                    <img class="backdrop fade lazyautosizes lazyloaded" data-sizes="auto" 
+                    data-src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}"
+                    data-srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                    sizes="533px" srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                      src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}">
+                  </div>
+
+                  <div class="poster">
+                    <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" 
+                    data-src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}}"
+                    data-srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                    alt="John Wick: De Volta ao Jogo" sizes="200px" srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                    src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}}">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel" *ngIf="movieDetail.belongsToCollection">
+              <div id="collection_waypoint" class="collection" style="display: block;">
+                <style>
+
+                </style>
+
+
+                <svg class="svg_overlay">
+                  <filter id="monochrome" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
+                    <feColorMatrix type="matrix" values="0.12 0 0 0 0
+              0.42 0 0 0 0
+              0.53 0 0 0 0
+              0 0 0 1 0"></feColorMatrix>
+                  </filter>
+                </svg>
+
+                <div class="header collection">
+                  <div class="background-collection" [ngStyle]=
+                  "{'background-image': 'url(https://image.tmdb.org/t/p/w1440_and_h320_bestv2' + movieDetail.belongsToCollection.backdrop_path + ')',
+                    'background-size': 'cover',
+                    'background-position': '50% 50%'}"></div>
+                  <section class="panel collection">
+                    <h2>Parte de {{movieDetail.title}}</h2>
+                    <p>Faz parte de uma série de filmes da coleção</p>
+
+                    <p class="new_button rounded">
+                      <a class="color-white" href="/collection/{{movieDetail.id}}?language=pt-BR">Mostrar a coletânea</a>
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </section>
+
+            <section id="recommendation_waypoint" class="panel recommendations scroller">
+              <h3 dir="auto">Recomendações</h3>
+              <div class="scroller">
+
+                <div *ngFor="let recommendation of movieDetail.recommendations?.slice(0,8)" class="item mini backdrop mini_card">
+                  <div class="image_content">
+                    <a href="/movie/156022" title="{{recommendation.title}}">
+                      <img class="backdrop fade lazyautosizes lazyloaded" 
+                      data-sizes="auto" 
+                      data-src="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}}"
+                      data-srcset="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_bestv2{{recommendation.backdrop_path}} 2x"
+                      sizes="85px" 
+                      srcset="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_bestv2{{recommendation.backdrop_path}} 2x"
+                      src="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}}">
+                      <div class="meta">
+                        <span class="release_date">
+                          <span class="glyphicons glyphicons-calendar x1"></span>{{recommendation.releaseDate}}</span>
+                        <span>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <p class="movie flex">
+                    <a class="title" href="/movie/156022" title="{{recommendation.title}}">
+                      <bdi>{{recommendation.title}}</bdi>
+                    </a>
+                    <span class="vote_average">{{recommendation.vote_average}}
+                      <span id="rating_50e9f941760ee3238750a780" class="glyphicons glyphicons-star x1 right rating"></span>
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="grey_column">
+        <div>
+
+          <section class="split_column">
+            <div>
+              <div class="column no_bottom_pad">
+                <section class="facts left_column">
+
+                  <svg class="svg_overlay">
+                    <filter id="black" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
+                      <feColorMatrix type="matrix" values="0 0 0 0 0
+                  0 0 0 0 0
+                  0 0 0 0 0
+                  0 0 0 1 0"></feColorMatrix>
+                    </filter>
+                  </svg>
+                  <div class="fantv">
+                    <p>Find out where to watch this on:</p>
+                    <a href="https://www.fan.tv/movies/223332" target="_blank" rel="noopener">
+                      <img class="fantv lazyloaded" width="59" height="24" data-src="/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png"
+                        data-srcset="/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png 1x, /static_cache/logos/fan_tv_logo-117x48-4c3bdf364e467c2934d0782ba56389269d4b6bc0bb89ec906befd5c2cc38d8ce.png 2x, /static_cache/logos/fan_tv_logo-176x72-0ff3f7d2321b736fcfcc0a674cb5ea36acae5b27aa2abc5b4c4c77a26017004d.png 3x"
+                        srcset="/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png 1x, /static_cache/logos/fan_tv_logo-117x48-4c3bdf364e467c2934d0782ba56389269d4b6bc0bb89ec906befd5c2cc38d8ce.png 2x, /static_cache/logos/fan_tv_logo-176x72-0ff3f7d2321b736fcfcc0a674cb5ea36acae5b27aa2abc5b4c4c77a26017004d.png 3x"
+                        src="/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png">
+                    </a>
+                  </div>
+
+
+                  <span class="social_links">
+
+                    <a class="social_link" href="https://www.facebook.com/johnwickmovie" target="_blank" rel="noopener">
+                      <span class="social social-facebook"></span>
+                    </a>
+
+
+                    <a class="social_link" href="https://twitter.com/JohnWickMovie" target="_blank" rel="noopener">
+                      <span class="social social-twitter"></span>
+                    </a>
+
+
+                    <a class="social_link" href="https://instagram.com/johnwickmovie/" target="_blank" rel="noopener">
+                      <span class="social social-instagram"></span>
+                    </a>
+
+                  </span>
+
+                  <h4>
+                    <bdi>Informações</bdi>
+                  </h4>
+
+                  <p class="wrap">
+                    <strong>Título original</strong> {{movieDetail.title}}</p>
+
+                  <p>
+                    <strong>
+                      <bdi>Situação</bdi>
+                    </strong> {{movieDetail.status}}</p>
+
+
+                  <p class="no_bottom_pad">
+                    <strong>Informações de lançamento</strong>
+                  </p>
+                  <ul class="releases" data-role="tooltip">
+
+                    <li>
+                      <img width="24" height="24" src="/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png"
+                        srcset="/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png 1x, /static_cache/flags_v2/48/US-fc54af6e5c8237200d49fd6a49061fffeb8a7217bb9000acd1c02039b65b22ba.png 2x, /static_cache/flags_v2/64/US-35bf08cd02d9c5ebef38cbfbd47c1c06f4d06203f8f0e5dce2d20c6cfb0281a7.png 3x"> 24 de Outubro de 2014
+                      <br>
+                      <div class="certification">
+                        <div>
+                          <span element="56901ce6c3a3680f89035195">R</span>
+                        </div> Cinema</div>
+                      <div id="56901ce6c3a3680f89035195" class="tooltip certification_info hide">
+                        <div class="certification_tooltip">
+                          <h3>Significado</h3>
+                          <p>Menores de 17 anos devem estar acompanhados de um dos pais ou guardião legal de 21 anos ou mais.
+                            O pai/guardião deve estar com o menor durante todo o filme. Pode conter profanidade extrema,
+                            sexualidade gráfica, nudez, violência extrema, horror, desmembramento e uso intenso de drogas.</p>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+
+
+                  <p>
+                    <strong>
+                      <bdi>Idioma original</bdi>
+                    </strong> English</p>
+                  <p>
+                    <strong>
+                      <bdi>Duração</bdi>
+                    </strong> 1h 41m</p>
+                  <p>
+                    <strong>
+                      <bdi>Orçamento</bdi>
+                    </strong> {{movieDetail.budget | currency}}</p>
+                  <p>
+                    <strong>
+                      <bdi>Receita</bdi>
+                    </strong> {{movieDetail.revenue | currency}}</p>
+                  <p>
+                    <strong>
+                      <bdi>Site oficial</bdi>
+                    </strong>
+                    <a href="{{movieDetail.homepage}}" target="_blank" rel="noopener">{{movieDetail.homepage}}</a>
+                  </p>
+                </section>
+
+                <section class="genres right_column">
+                  <h4>
+                    <bdi>Gêneros</bdi>
+                  </h4>
+
+                  <ul>
+
+                    <li>
+                      <a href="/genre/28-acao/movie">Ação</a>
+                    </li>
+
+                    <li>
+                      <a href="/genre/53-thriller/movie">Thriller</a>
+                    </li>
+
+                  </ul>
+
+                </section>
+
+                <section class="keywords right_column">
+                  <h4>
+                    <bdi>Palavras-chave</bdi>
+                  </h4>
+
+                  <ul>
+                    <li *ngFor="let keyword of movieDetail.keywords">
+                      <a href="/keyword/{{keyword.id}}-{{keyword.name}}/movie">{{keyword.name}}</a>
+                    </li>
+                  </ul>
+
+                </section>
+              </div>
+            </div>
+
+            <div>
+              <section class="content_score">
+                <h4 dir="auto">Avaliação do conteúdo</h4>
+                <div class="content_score">
+                  <div class="false" style="width: 100%;">
+                    <p>100</p>
+                  </div>
+                </div>
+                <p dir="auto">Aí sim! Ficou ótimo!</p>
+              </section>
+
+              <section class="leaderboard">
+                <h4>Principais colaboradores</h4>
+
+                <div class="leaders">
+
+
+                  <div class="edit_leader">
+                    <div class="avatar">
+                      <a href="/u/Torq00">
+
+                        <span class="round initials background_color light_blue">T</span>
+
+                      </a>
+                    </div>
+                    <div class="info">
+                      <p class="edit_count">39</p>
+                      <p>
+                        <a href="/u/Torq00">Torq00</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="edit_leader">
+                    <div class="avatar">
+                      <a href="/u/Paszt">
+
+                        <img class="avatar fade lazyloaded" data-src="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg"
+                          data-srcset="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 1x, https://image.tmdb.org/t/p/w90_and_h90_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 2x"
+                          alt="Elizabeth Jennings" srcset="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 1x, https://image.tmdb.org/t/p/w90_and_h90_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 2x"
+                          src="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg">
+
+                      </a>
+                    </div>
+                    <div class="info">
+                      <p class="edit_count">36</p>
+                      <p>
+                        <a href="/u/Paszt">Elizabeth Jennings</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="edit_leader">
+                    <div class="avatar">
+                      <a href="/u/DaMan">
+
+                        <img class="avatar fade lazyloaded" data-src="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45"
+                          data-srcset="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45 1x, https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=90 2x"
+                          alt="DaMan" srcset="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45 1x, https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=90 2x"
+                          src="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45">
+
+                      </a>
+                    </div>
+                    <div class="info">
+                      <p class="edit_count">34</p>
+                      <p>
+                        <a href="/u/DaMan">DaMan</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="edit_leader">
+                    <div class="avatar">
+                      <a href="/u/Wonderm00n">
+
+                        <img class="avatar fade lazyloaded" data-src="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45"
+                          data-srcset="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45 1x, https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=90 2x"
+                          alt="Marco Almeida" srcset="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45 1x, https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=90 2x"
+                          src="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45">
+
+                      </a>
+                    </div>
+                    <div class="info">
+                      <p class="edit_count">24</p>
+                      <p>
+                        <a href="/u/Wonderm00n">Marco Almeida</a>
+                      </p>
+                    </div>
+                  </div>
+
+
+                  <p>
+                    <a href="/movie/245891-john-wick/changes">
+                      <span class="glyphicons glyphicons-chevron-right x1"></span> Histórico de edições</a>
+                  </p>
+
+                </div>
+              </section>
+
+              <section class="popularity_trend">
+                <h4 dir="auto">Curva de popularidade</h4>
+                <div id="popularity_waypoint" class="popularity">
+                  <div id="popularity_chart" data-role="sparkline" class=" k-sparkline" style="position: relative;">
+                    <span data-role="surface" style="width: 208px; height: 50px;">
+                      <svg style="width: 100%; height: 100%; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1">
+                        <defs></defs>
+                        <g>
+                          <path d="M0 0 L 208 0 208 50 0 50Z" stroke="none" fill="none"></path>
+                          <path d="M0 1 L 207 1 207 49 0 49Z" stroke="none" fill="#fff" fill-opacity="0"></path>
+                          <g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g>
+                              <g>
+                                <path d="M14.786 28.429 L 44.357 42.143 73.929 42.143 103.5 42.143 133.071 42.143 162.643 14.714 192.214 14.714"
+                                  stroke="#021f3f" stroke-width="2" fill="none"></path>
+                              </g>
+                            </g>
+                          </g>
+                          <g></g>
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+
+            <div class="">
+              <p class="rounded new_button pad">
+                <a class="color-white" href="/login?redirect=/movie/245891-john-wick/edit">
+                  <span class="glyphicons glyphicons-lock x1"></span> Entre com uma conta para editar</a>
+              </p>
+            </div>
+
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- 
+<script>
+  $(document).ready(function() {
+
+    $('section.social_panel a.media_panel').on('click', function(e){
+      e.preventDefault();
+      var link = $(this);
+      var selected_id = this.id;
+
+      $.ajax({
+        url: '/movie/245891-john-wick/remote/social_panel/' + selected_id + '?timezone=America/New_York',
+        headers: {
+          'Accept-Language': 'pt-BR',
+          'Content-Type': 'text/html;charset=utf-8'
+        }
+      }).done(function(response) {
+        $('section.social_panel ul li.active').removeClass('active');
+        link.parent().addClass('active');
+
+        $('section.social_panel div.content').hide().html(response).fadeIn(300);
+        $("section.social_panel div.content").find("script").each(function(i) {
+          eval($(this).text());
+        });
+      });
+    });
+
+    var review_panel_height = $('div.header.large.review').innerHeight();
+    $('div.review_container div.image').height(review_panel_height);
+
+    var original_media_panel_content = $('section.media_panel.media div.content div.original_content').clone();
+
+    $('section.media_panel.media a.media_panel').on('click', function(e){
+      e.preventDefault();
+      var link = $(this);
+      var item_count = link.find('span').text();
+      var selected_id = this.id;
+
+      switch(selected_id) {
+        case 'popular':
+          var view_all = ''
+          break;
+        case 'videos':
+          var view_all = '<a href="/movie/245891-john-wick/videos">Mostrar todos os vídeos</a>'
+          break;
+        case 'backdrops':
+          var view_all = '<a href="/movie/245891-john-wick/images/backdrops">Mostrar todas as imagens de fundo</a>'
+          break;
+        default:
+          var view_all = '<a href="/movie/245891-john-wick/images/posters">Mostrar todos os pôsteres</a>'
+      }
+
+      if (selected_id == 'popular') {
+        $('section.media_panel.media ul li.active').removeClass('active');
+        link.parent().addClass('active');
+        $('section.media_panel.media div.content').scrollLeft(0);
+        $('section.media_panel.media div.content').html(original_media_panel_content);
+        $('section.media_panel.media ul li.view_all').html(view_all);
+      } else {
+        $.ajax({
+          url: '/movie/245891-john-wick/remote/media_panel/' + selected_id + '?translate=false&item_count=' + item_count,
+          type: 'GET'
+        }).done(function(response) {
+          $('section.media_panel.media ul li.active').removeClass('active');
+          link.parent().addClass('active');
+          $('section.media_panel.media div.content').scrollLeft(0);
+          $('section.media_panel.media div.content').html(response);
+          $('section.media_panel.media ul li.view_all').html(view_all);
+        });
+      }
+    });
+
+    
+
+    function createPopularitySparkline(response) {
+      $("#popularity_chart").kendoSparkline({
+        data: response.values,
+        legend: {
+          visible: false
+        },
+        plotArea: {
+          opacity: 0,
+          margin: 0
+        },
+        chartArea: {
+          margin: {
+            top: 1,
+            bottom: 0,
+            left: 0,
+            right: 0
+          },
+          padding: 0,
+          background: 'transparent'
+        },
+        categoryAxis: {
+          categories: response.labels,
+          crosshair: {
+            visible: false
+          }
+        },
+        series: [{
+          type: 'line',
+          color: "#021f3f",
+          data: response.values,
+          spacing: 0,
+          gap: 0,
+          width: 2,
+          padding: 0
+        }],
+        tooltip: {
+          visible: true,
+          background: "#081c24",
+          color: "#fff",
+          border: {
+            width: 0,
+            color: "transparent"
+          },
+          font: "600 1.2em 'Source Sans Pro', 'Arial', sans-serif",
+          format: "N0",
+          template: "Ranked #= Math.abs(value) #"
+        },
+      });
+    }
+
+    popularity_loaded = false;
+    new Waypoint({
+      element: document.getElementById('popularity_waypoint'),
+      handler: function(direction) {
+        if (direction == 'down' && !popularity_loaded) {
+          $.ajax({
+            url: '/movie/245891-john-wick/remote/popularity?translate=false',
+            type: 'GET'
+          }).done(function(response) {
+            popularity_loaded = true;
+            createPopularitySparkline(response);
+          });
+        }
+      },
+      offset: '100%'
+    });
+
+  });
+</script> -->
+  </div>
+</section>

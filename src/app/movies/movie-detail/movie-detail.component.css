@@ -1,0 +1,170 @@
+
+    .k-header {
+        color: #ffffff;
+      }
+  
+      .k-window-titlebar.k-header {
+        background-color: #1f6a87;
+      }
+  
+      .k-window-titlebar .k-state-hover, .k-overflow-container .k-primary:hover, .k-primary:hover {
+        background-color: #1f6a87;
+        border-color: #1f6a87;
+      }
+  
+      .k-tooltip.custom_theme {
+        background-color: #021f3f;
+        color: #ffffff;
+      }
+  
+      .custom_theme .k-tooltip-content {
+        white-space: nowrap;
+      }
+  
+      .custom_theme .k-callout-n {
+        border-bottom-color: #021f3f;
+      }
+  
+      .custom_theme .k-callout-e {
+        border-left-color: #021f3f;
+      }
+  
+      .custom_theme .k-callout-w {
+        border-right-color: #021f3f;
+      }
+  
+      .custom_theme .k-callout-s {
+        border-top-color: #021f3f;
+      }
+  
+      .k-tooltip.tmdb_theme_light {
+        background-color: #97f8cd !important;
+        color: #000 !important;
+      }
+  
+      .tmdb_theme_light .k-callout-n {
+        border-bottom-color: rgba(151,248,205,1) !important;
+      }
+  
+      .tmdb_theme_light .k-callout-e {
+        border-left-color: rgba(151,248,205,1) !important;
+      }
+  
+      .tmdb_theme_light .k-callout-w {
+        border-right-color: rgba(151,248,205,1) !important;
+      }
+  
+      .tmdb_theme_light .k-callout-s {
+        border-top-color: rgba(151,248,205,1) !important;
+      }
+  
+      
+        div.header.large.first:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          display: block;
+          filter: opacity(0) grayscale(100%) contrast(130%);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-image: url('https://image.tmdb.org/t/p/w1400_and_h450_face/umC04Cozevu8nn3JTDJ1pc7PVTn.jpg');
+          will-change: opacity;
+          transition: filter 1s;
+        }
+  
+        div.header.large.first.lazyloaded:before {
+          filter: opacity(100) grayscale(100%) contrast(130%);
+        }
+      
+  
+      div.custom_bg {
+        
+          background-image: radial-gradient(circle at 20% 50%, rgba(12.16%, 41.57%, 52.94%, 0.98) 0%, rgba(25.88%, 56.08%, 60.00%, 0.88) 100%);
+        
+      }
+  
+      section div.header.first div.single_column {
+        background: transparent;
+      }
+  
+      section.inner_content section.header {
+        color: #fff;
+      }
+  
+      section.inner_content section.header a, section.inner_content section.header div.title a {
+        color: #fff;
+      }
+  
+      section.inner_content a, section.media_panel div.menu ul li.active a {
+        color: #000;
+      }
+  
+      section.inner_content a:hover, section.media_panel div.menu ul li.active a:hover {
+        color: #021f3f;
+      }
+  
+      section.inner_content section.header ul.actions li.tooltip a, section.inner_content section.header ul.actions li.video a {
+        border-color: #fff;
+        color: #fff;
+      }
+  
+      section.inner_content section.header ul.actions li.tooltip a:hover {
+        color: #021f3f;
+        background-color: #ffffff;
+        border-color: rgba(100.00%, 100.00%, 100.00%, 0.20);
+      }
+  
+      p.new_button a, section.media_panel div.menu ul li.view_all a, section.inner_content section.header ul.actions li.video a:hover, div.episode div.info span.episode_number, section.review div.review_container div.inner_content div.teaser p a {
+        color: #021f3f;
+      }
+  
+      p.rounded.new_button a:hover {
+        color: #ffffff;
+      }
+  
+      section.media_panel div.menu ul li.active, section.inner_content ul.shortcut_bar li.selected, section.inner_content ul.shortcut_bar li:hover {
+        border-color: #021f3f;
+      }
+  
+      section.content_score div.content_score {
+        background-color: rgba(0.78%, 12.16%, 24.71%, 0.60);
+      }
+  
+      p.new_button.rounded, section.content_score div.content_score div, div.leaderboard div.histogram div.bar span {
+        border-color: #021f3f;
+        background-color: #021f3f;
+        color: #ffffff;
+      }
+
+      .background-collection{
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        width: calc((100vw - 1000px) / 2 + 780px);
+        height: 258px;
+        content: '';
+        background-image: url(/assets/static_cache/136bbaf…/images/v4/account_pipes/silver.svg);
+        background-color: #ccc;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+        filter: contrast(120%) url(#monochrome) brightness(150%);
+      }
+
+      div.header.collection h2 {
+        color: #fff;
+      }
+
+      .color-white{
+        display: inline-flex;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        color: #fff !important;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
