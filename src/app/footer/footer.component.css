@@ -1,3 +1,7 @@
 footer {
     background-image: url('../../assets/images/footerimage.jpg');
 }
+
+.nav-footer{
+    margin:auto
+}

@@ -6,10 +6,7 @@
         <section class="images inner">
           <div class="poster">
             <div class="image_content">
-              <img class="poster" 
-              src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}}" 
-              srcset="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}} 2x"
-              >
+              <img class="poster" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}}" srcset="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}} 2x">
             </div>
             <div class="zoom">
               <a>
@@ -110,7 +107,8 @@
     </div>
   </div>
 
-  <div id="media_v4" class="media movie_v4 header_large">
+  <!-- <div id="media_v4" class="media movie_v4 header_large"> -->
+  <div id="media_v4" class="">
     <div class="content_wrapper full_width bottom_border">
       <ul class="shortcut_bar">
         <li>
@@ -147,14 +145,12 @@
             <section class="panel top_billed scroller">
               <h3 dir="auto">Elenco principal</h3>
               <ol class="people scroller">
-                  <!-- suscetivel a erro -->
+                <!-- suscetivel a erro -->
                 <li *ngFor="let person of movieDetail.mainCast.slice(0,5)" class="card">
                   <a href="/person/{{person.id}}">
-                    <img class="profile fade lazyautosizes lazyloaded" data-sizes="auto" 
-                    data-src="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}}"
+                    <img class="profile fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}}"
                       data-srcset="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}} 1x, https://image.tmdb.org/t/p/w276_and_h350_face{{person.profile_path}} 2x"
-                      alt="Keanu Reeves" sizes="138px" 
-                      srcset="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}} 1x, https://image.tmdb.org/t/p/w276_and_h350_face{{person.profile_path}} 2x"
+                      alt="Keanu Reeves" sizes="138px" srcset="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}} 1x, https://image.tmdb.org/t/p/w276_and_h350_face{{person.profile_path}} 2x"
                       src="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}}">
                   </a>
                   <p>
@@ -342,7 +338,7 @@
                 <h3 dir="auto">Mídia</h3>
                 <ul>
                   <li class="active" dir="auto">
-                    <a id="popular" class="media_panel" >Mais popular</a>
+                    <a id="popular" class="media_panel">Mais popular</a>
                   </li>
                   <li dir="auto">
                     <a id="videos" class="media_panel">Vídeos
@@ -365,24 +361,22 @@
               <div class="content">
                 <div class="original_content">
 
-                  <div class="video">
-                    <iframe class=" lazyloaded" type="text/html" width="533" height="300" data-src="//www.youtube.com/embed/rUKOAwlyNag?enablejsapi=1&amp;autoplay=0&amp;origin=https%3A%2F%2Fwww.themoviedb.org&amp;hl=pt-BR&amp;modestbranding=1&amp;fs=1"
-                      frameborder="0" allowfullscreen=""></iframe>
+                  <div class="">
+                    <!-- <iframe class=" lazyloaded" type="text/html" width="533" height="300" data-src="//www.youtube.com/embed/rUKOAwlyNag?enablejsapi=1&amp;autoplay=0&amp;origin=https%3A%2F%2Fwww.themoviedb.org&amp;hl=pt-BR&amp;modestbranding=1&amp;fs=1"
+                      frameborder="0" allowfullscreen=""></iframe> -->
                   </div>
-                  <div class="backdrop">
-                    <img class="backdrop fade lazyautosizes lazyloaded" data-sizes="auto" 
-                    data-src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}"
-                    data-srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
-                    sizes="533px" srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                  <div class="">
+                    <img class="backdrop fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}"
+                      data-srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                      sizes="533px" srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
                       src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}">
                   </div>
 
                   <div class="poster">
-                    <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" 
-                    data-src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}}"
-                    data-srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
-                    alt="John Wick: De Volta ao Jogo" sizes="200px" srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
-                    src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}}">
+                    <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}}"
+                      data-srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                      alt="John Wick: De Volta ao Jogo" sizes="200px" srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                      src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}}">
                   </div>
                 </div>
               </div>
@@ -391,7 +385,6 @@
             <section class="panel" *ngIf="movieDetail.belongsToCollection">
               <div id="collection_waypoint" class="collection" style="display: block;">
                 <style>
-
                 </style>
 
 
@@ -405,8 +398,7 @@
                 </svg>
 
                 <div class="header collection">
-                  <div class="background-collection" [ngStyle]=
-                  "{'background-image': 'url(https://image.tmdb.org/t/p/w1440_and_h320_bestv2' + movieDetail.belongsToCollection.backdrop_path + ')',
+                  <div class="background-collection" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w1440_and_h320_bestv2' + movieDetail.belongsToCollection.backdrop_path + ')',
                     'background-size': 'cover',
                     'background-position': '50% 50%'}"></div>
                   <section class="panel collection">
@@ -428,13 +420,10 @@
                 <div *ngFor="let recommendation of movieDetail.recommendations?.slice(0,8)" class="item mini backdrop mini_card">
                   <div class="image_content">
                     <a href="/movie/156022" title="{{recommendation.title}}">
-                      <img class="backdrop fade lazyautosizes lazyloaded" 
-                      data-sizes="auto" 
-                      data-src="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}}"
-                      data-srcset="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_bestv2{{recommendation.backdrop_path}} 2x"
-                      sizes="85px" 
-                      srcset="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_bestv2{{recommendation.backdrop_path}} 2x"
-                      src="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}}">
+                      <img class="backdrop fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}}"
+                        data-srcset="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_bestv2{{recommendation.backdrop_path}} 2x"
+                        sizes="85px" srcset="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_bestv2{{recommendation.backdrop_path}} 2x"
+                        src="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}}">
                       <div class="meta">
                         <span class="release_date">
                           <span class="glyphicons glyphicons-calendar x1"></span>{{recommendation.releaseDate}}</span>
@@ -480,10 +469,10 @@
                   <div class="fantv">
                     <p>Find out where to watch this on:</p>
                     <a href="https://www.fan.tv/movies/223332" target="_blank" rel="noopener">
-                      <img class="fantv lazyloaded" width="59" height="24" data-src="/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png"
-                        data-srcset="/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png 1x, /static_cache/logos/fan_tv_logo-117x48-4c3bdf364e467c2934d0782ba56389269d4b6bc0bb89ec906befd5c2cc38d8ce.png 2x, /static_cache/logos/fan_tv_logo-176x72-0ff3f7d2321b736fcfcc0a674cb5ea36acae5b27aa2abc5b4c4c77a26017004d.png 3x"
-                        srcset="/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png 1x, /static_cache/logos/fan_tv_logo-117x48-4c3bdf364e467c2934d0782ba56389269d4b6bc0bb89ec906befd5c2cc38d8ce.png 2x, /static_cache/logos/fan_tv_logo-176x72-0ff3f7d2321b736fcfcc0a674cb5ea36acae5b27aa2abc5b4c4c77a26017004d.png 3x"
-                        src="/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png">
+                      <img class="fantv lazyloaded" width="59" height="24" data-src="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png"
+                        data-srcset="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png 3x"
+                        srcset="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png 3x"
+                        src="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png">
                     </a>
                   </div>
 
@@ -525,8 +514,8 @@
                   <ul class="releases" data-role="tooltip">
 
                     <li>
-                      <img width="24" height="24" src="/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png"
-                        srcset="/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png 1x, /static_cache/flags_v2/48/US-fc54af6e5c8237200d49fd6a49061fffeb8a7217bb9000acd1c02039b65b22ba.png 2x, /static_cache/flags_v2/64/US-35bf08cd02d9c5ebef38cbfbd47c1c06f4d06203f8f0e5dce2d20c6cfb0281a7.png 3x"> 24 de Outubro de 2014
+                      <img width="24" height="24" src="https://www.themoviedb.org/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png"
+                        srcset="https://www.themoviedb.org/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png 1x, https://www.themoviedb.org/static_cache/flags_v2/48/US-fc54af6e5c8237200d49fd6a49061fffeb8a7217bb9000acd1c02039b65b22ba.png 2x, https://www.themoviedb.org/static_cache/flags_v2/64/US-35bf08cd02d9c5ebef38cbfbd47c1c06f4d06203f8f0e5dce2d20c6cfb0281a7.png 3x"> 24 de Outubro de 2014
                       <br>
                       <div class="certification">
                         <div>
@@ -719,8 +708,8 @@
                             <g></g>
                             <g>
                               <g>
-                                <path d="M14.786 28.429 L 44.357 42.143 73.929 42.143 103.5 42.143 133.071 42.143 162.643 14.714 192.214 14.714"
-                                  stroke="#021f3f" stroke-width="2" fill="none"></path>
+                                <path d="M14.786 28.429 L 44.357 42.143 73.929 42.143 103.5 42.143 133.071 42.143 162.643 14.714 192.214 14.714" stroke="#021f3f"
+                                  stroke-width="2" fill="none"></path>
                               </g>
                             </g>
                           </g>

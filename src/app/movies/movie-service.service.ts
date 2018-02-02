@@ -13,15 +13,20 @@ export class MovieService {
 
   }
 
-  getMovies(): Observable<any> {
-    return this.http.get(this.getApiUrl("discover/movie"));
+  getMovies(params = {}): Observable<any> {
+    return this.http.get(this.getApiUrl("discover/movie", params));
   }
 
   getMovie(id: number): Observable<any> {
-    return this.http.get(this.getApiUrl("movie/" + id.toString()));
+    return this.http.get(this.getApiUrl("movie/" + id.toString(), {}));
   }
 
-  private getApiUrl(method: string){
-    return this.urlBase + method + "?api_key=" + this.apiKey + "&language=pt-BR&append_to_response=videos,images,keywords,recommendations,credits,collection";
+  private getApiUrl(method: string, params: {}) {
+    var url = this.urlBase + method + "?api_key=" + this.apiKey + "&language=pt-BR&append_to_response=videos,images,keywords,recommendations,credits,collection";
+    Object.keys(params).forEach(function (key, index) {
+      url += "&" + key + "=" + params[key];
+    });
+
+    return url;
   }
 }
