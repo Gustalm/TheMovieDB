@@ -1,0 +1,49 @@
+.sinopsys-container{
+    width:100%;
+}
+
+.custom-background{
+        position: absolute;
+        z-index: -2;
+        display: block;
+        filter: opacity(0) grayscale(100%) contrast(130%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-image: url(https://image.tmdb.org/t/p/w1400_and_h450_face/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg);
+        will-change: opacity;
+        transition: filter 1s;
+        filter: opacity(100) grayscale(100%) contrast(130%);
+}
+
+.sinopysis-content{
+    color:white;
+}
+
+.profile{
+    color: white !important;
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+}
+
+.sinopsys-title{
+    margin: 0;
+    padding: 0;
+    font-size: 2.4em;
+    line-height: 1.1em;
+    font-weight: 700;
+    display: inline-block;
+    COLOR: white;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: block;
+    background-image: radial-gradient(circle at 20% 50%, rgba(21.96%, 12.94%, 38.04%, 0.98) 0%, rgba(21.96%, 12.94%, 38.04%, 0.88) 100%);
+}

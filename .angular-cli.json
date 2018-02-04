@@ -22,7 +22,8 @@
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "assets/styles/css/media.css",
         "assets/styles/css/discover.css",
-        "assets/styles/css/styles.css"
+        "assets/styles/css/styles.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

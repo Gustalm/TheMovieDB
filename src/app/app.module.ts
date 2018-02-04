@@ -9,6 +9,9 @@ import { MovieCardComponent } from './movies/movies-list/movie-card/movie-card.c
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './movies/movie-service.service';
 import { AppRoutingModule } from './app.routing.module';
+import { FormsModule } from '@angular/forms';
+import { MovieSinopsysComponent } from './movies/movie-detail/movie-sinopsys/movie-sinopsys.component';
+import { MovieCastComponent } from './movies/movie-detail/movie-cast/movie-cast.component';
 
 
 @NgModule({
@@ -18,12 +21,15 @@ import { AppRoutingModule } from './app.routing.module';
     FooterComponent,
     MoviesListComponent,
     MovieDetailComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    MovieSinopsysComponent,
+    MovieCastComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

@@ -1,0 +1,106 @@
+<div class="overlay h-100 w-100">
+</div>
+<div class="row custom-background h-100 w-100" [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w1400_and_h450_face' + movieDetail.backdropPath + ')'}">
+</div>
+<div class="row justify-content-center sinopysis-content">
+  <div class="pt-5 pb-5">
+    <section class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+
+          <div class="">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}}" srcset="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}} 2x">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <section>
+
+            <div style="width: 100%; margin-bottom: 30px;">
+
+              <span>
+                <a href="/movie/245891-john-wick">
+                  <h2 class="sinopsys-title">{{movieDetail.title}}</h2>
+                </a>
+                <span class="release_date">{{movieDetail.releaseYear}}</span>
+              </span>
+
+            </div>
+            <!-- <ul class="auto actions">
+                <li class="chart">
+                  <div class="consensus">
+                    <div class="outer_ring">
+                      <div class="user_score_chart" data-percent="70.0" data-track-color="#204529" data-bar-color="#21d07a">
+                        <div class="percent">
+
+                          <span class="icon icon-r70"></span>
+
+                        </div>
+                        <canvas height="60" width="60"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text">Avaliação
+                    dos
+                    usuários</div>
+                </li>
+
+                 <li class="tooltip use_tooltip" title="Entre com uma conta para criar e editar listas" data-role="tooltip">
+                  <a class="no_click" href="#">
+                    <span class="glyphicons glyphicons-list x1"></span>
+                  </a>
+                </li>
+
+
+                <li class="use_tooltip tooltip" title="Entre com uma conta para adicionar este filme aos seus favoritos" data-role="tooltip">
+                  <a id="favourite" class="no_click add_to_account_list favourite false" href="#">
+                    <span class="glyphicons glyphicons-heart x1"></span>
+                  </a>
+                </li>
+
+
+                <li class="use_tooltip tooltip" title="Entre com uma conta para adicionar este filme à sua lista de interesses" data-role="tooltip">
+                  <a id="watchlist" class="no_click add_to_account_list watchlist false" href="#">
+                    <span class="glyphicons glyphicons-bookmark x1"></span>
+                  </a>
+                </li>
+
+
+                <li class="tooltip use_tooltip rating" title="Entre com uma conta para avaliar este filme" data-role="tooltip">
+                  <a id="rate_it" class="no_click rating false" href="#">
+                    <span class="glyphicons glyphicons-star x1"></span>
+                  </a>
+                </li>
+                <li class="video none">
+                  <a class="no_click play_trailer" href="#" data-id="rUKOAwlyNag">
+                    <span class="glyphicons glyphicons-play"></span> Reproduzir trailer</a>
+                </li>
+              </ul> -->
+
+            <div class="header_info">
+              <h3 dir="auto">Sinopse</h3>
+              <div class="overview" dir="auto">
+                <p>{{movieDetail.overview}}</p>
+              </div>
+
+              <h3 class="featured" dir="auto">Equipe técnica principal</h3>
+              <ol class="people no_image">
+
+                <!-- suscetivel a erro -->
+                <li *ngFor="let profile of movieDetail.crew.slice(0, 3)" class="profile">
+                  <p>
+                    <a href="/person/{{profile.id}}" style="color:white;">{{profile.name}}</a>
+                  </p>
+                  <p class="character">{{profile.job}}</p>
+                </li>
+                <li class="profile"></li>
+                <li class="profile"></li>
+                <li class="profile"></li>
+              </ol>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>

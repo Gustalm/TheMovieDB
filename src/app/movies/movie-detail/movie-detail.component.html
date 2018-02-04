@@ -1,171 +1,43 @@
-<section class="inner_content movie_content backdrop poster">
+<section class="container-fluid">
+  <app-movie-sinopsys [movieDetail]="movieDetail">
+  </app-movie-sinopsys>
 
-  <div class="header large border first lazyloaded">
-    <div class="custom_bg">
-      <div class="single_column">
-        <section class="images inner">
-          <div class="poster">
-            <div class="image_content">
-              <img class="poster" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}}" srcset="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.posterPath}} 2x">
-            </div>
-            <div class="zoom">
-              <a>
-                <span class="glyphicons glyphicons-zoom-in x1"></span> Expandir</a>
-            </div>
-          </div>
-          <div class="header_poster_wrapper">
-            <section class="header poster">
-              <div class="title" dir="auto">
-
-                <span>
-                  <a href="/movie/245891-john-wick">
-                    <h2 class="27">{{movieDetail.title}}</h2>
-                  </a>
-                  <span class="release_date">{{movieDetail.releaseYear}}</span>
-                </span>
-
-              </div>
-              <ul class="auto actions">
-
-                <li class="chart">
-                  <div class="consensus">
-                    <div class="outer_ring">
-                      <div class="user_score_chart" data-percent="70.0" data-track-color="#204529" data-bar-color="#21d07a">
-                        <div class="percent">
-
-                          <span class="icon icon-r70"></span>
-
-                        </div>
-                        <canvas height="60" width="60"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="text">Avaliação
-                    <br>dos
-                    <br>usuários</div>
-                </li>
-
-                <li class="tooltip use_tooltip" title="Entre com uma conta para criar e editar listas" data-role="tooltip">
-                  <a class="no_click" href="#">
-                    <span class="glyphicons glyphicons-list x1"></span>
-                  </a>
-                </li>
-
-
-                <li class="use_tooltip tooltip" title="Entre com uma conta para adicionar este filme aos seus favoritos" data-role="tooltip">
-                  <a id="favourite" class="no_click add_to_account_list favourite false" href="#">
-                    <span class="glyphicons glyphicons-heart x1"></span>
-                  </a>
-                </li>
-
-
-                <li class="use_tooltip tooltip" title="Entre com uma conta para adicionar este filme à sua lista de interesses" data-role="tooltip">
-                  <a id="watchlist" class="no_click add_to_account_list watchlist false" href="#">
-                    <span class="glyphicons glyphicons-bookmark x1"></span>
-                  </a>
-                </li>
-
-
-                <li class="tooltip use_tooltip rating" title="Entre com uma conta para avaliar este filme" data-role="tooltip">
-                  <a id="rate_it" class="no_click rating false" href="#">
-                    <span class="glyphicons glyphicons-star x1"></span>
-                  </a>
-                </li>
-                <li class="video none">
-                  <a class="no_click play_trailer" href="#" data-id="rUKOAwlyNag">
-                    <span class="glyphicons glyphicons-play"></span> Reproduzir trailer</a>
-                </li>
-              </ul>
-
-              <div class="header_info">
-                <h3 dir="auto">Sinopse</h3>
-                <div class="overview" dir="auto">
-                  <p>{{movieDetail.overview}}</p>
-                </div>
-
-                <h3 class="featured" dir="auto">Equipe técnica principal</h3>
-                <ol class="people no_image">
-
-                  <!-- suscetivel a erro -->
-                  <li *ngFor="let profile of movieDetail.crew.slice(0, 3)" class="profile">
-                    <p>
-                      <a href="/person/{{profile.id}}">{{profile.name}}</a>
-                    </p>
-                    <p class="character">{{profile.job}}</p>
-                  </li>
-                  <li class="profile"></li>
-                  <li class="profile"></li>
-                  <li class="profile"></li>
-                </ol>
-              </div>
-            </section>
-          </div>
-
-        </section>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- <div id="media_v4" class="media movie_v4 header_large"> -->
-  <div id="media_v4" class="">
-    <div class="content_wrapper full_width bottom_border">
-      <ul class="shortcut_bar">
-        <li>
+  <!-- <div> -->
+    <div class="row bg-white text-center detail-menu-container justify-content-center">
+      <ul class="list-group d-inline-block">
+        <li class="list-group-item d-inline-block menu-item">
           <a class="" href="/movie/{{movieDetail.id}}/discuss" title="Discussões">Discussões</a>
         </li>
-        <li class="">
+        <li class="list-group-item d-inline-block  menu-item">
           <a class="" href="/movie/{{movieDetail.id}}/reviews" title="Resenhas">Resenhas</a>
         </li>
-        <li class="">
+        <li class="list-group-item d-inline-block  menu-item">
           <a class="" href="/movie/{{movieDetail.id}}/videos" title="Vídeos">Vídeos</a>
         </li>
-        <li class="">
+        <li class="list-group-item d-inline-block  menu-item">
           <a class="" href="/movie/{{movieDetail.id}}/images/posters" title="Imagens">Imagens</a>
         </li>
-        <li class="">
+        <li class="list-group-item d-inline-block menu-item">
           <a class="" href="/movie/{{movieDetail.id}}/changes" title="Alterações">Alterações</a>
         </li>
-        <li>
+        <li class="list-group-item d-inline-block  menu-item">
           <a class="no_click report" window="movie" href="#" title="Relatório">Relatório</a>
         </li>
-        <li>
+        <li class="list-group-item d-inline-block menu-item">
           <a id="share" class="no_click" href="#" title="Compartilhar">Compartilhar</a>
         </li>
 
       </ul>
     </div>
 
-    <div class="column_wrapper">
-
-      <div>
-        <div class="white_column">
-
+    <div class="row bg-white">
+        <div class="col-xm-12 col-md-8 container ">
           <div>
-            <section class="panel top_billed scroller">
-              <h3 dir="auto">Elenco principal</h3>
-              <ol class="people scroller">
-                <!-- suscetivel a erro -->
-                <li *ngFor="let person of movieDetail.mainCast.slice(0,5)" class="card">
-                  <a href="/person/{{person.id}}">
-                    <img class="profile fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}}"
-                      data-srcset="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}} 1x, https://image.tmdb.org/t/p/w276_and_h350_face{{person.profile_path}} 2x"
-                      alt="Keanu Reeves" sizes="138px" srcset="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}} 1x, https://image.tmdb.org/t/p/w276_and_h350_face{{person.profile_path}} 2x"
-                      src="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}}">
-                  </a>
-                  <p>
-                    <a href="/person/{{person.id}}">{{person.name}}</a>
-                  </p>
-                  <p class="character">{{person.character}}</p>
-                </li>
-              </ol>
+            <app-movie-cast [cast]="movieDetail.mainCast" [movieId]="movieDetail.Id">
+            </app-movie-cast>
 
-              <p class="new_button">
-                <a class="" href="/movie/{{movieDetail.id}}/cast">Elenco e equipe técnica completos</a>
-              </p>
-            </section>
-
-            <section class="panel media_panel social_panel">
+            <hr>
+            <!-- <section class="panel media_panel social_panel">
               <section class="review">
                 <div class="menu">
                   <h3 dir="auto">Social</h3>
@@ -330,64 +202,57 @@
 
                 </div>
               </section>
-            </section>
+            </section> -->
 
-            <section class="panel media_panel media scroller">
-
-              <div class="menu">
-                <h3 dir="auto">Mídia</h3>
-                <ul>
-                  <li class="active" dir="auto">
+            <section class="container">
+              <div class="row">
+                <h3 class="pt-2" dir="auto">Mídia</h3>
+                <ul class="list-group d-inline-block">
+                  <li class="active list-group-item d-inline-block media-item">
                     <a id="popular" class="media_panel">Mais popular</a>
                   </li>
-                  <li dir="auto">
-                    <a id="videos" class="media_panel">Vídeos
+                  <li class="list-group-item d-inline-block media-item">
+                    <a id="videos">Vídeos
                       <!-- <span>{{movideDetail.videos.length}}</span> -->
                     </a>
                   </li>
-                  <li dir="auto">
-                    <a id="backdrops" class="media_panel" href="#">Imagens de fundo
+                  <li class="list-group-item d-inline-block media-item">
+                    <a id="backdrops">Imagens de fundo
                       <!-- <span>{{movideDetail.images.backdrops.length}}</span> -->
                     </a>
                   </li>
-                  <li dir="auto">
-                    <a id="posters" class="media_panel" href="#">Pôsteres
+                  <li class="list-group-item d-inline-block media-item">
+                    <a id="posters">Pôsteres
                       <!-- <span>{{movideDetail.images.posters.length}}</span> -->
                     </a>
                   </li>
-                  <li class="view_all"></li>
                 </ul>
               </div>
-              <div class="content">
-                <div class="original_content">
+              <div class="row overflow-x-scroll media-content-container d-inline-block">
+                <div class="d-inline-block">
+                    <iframe width="400px" height="300px" class="pull-left"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                </div>
+                <div class="d-inline-block" style="width: 533px; height: 300px;">
+                  <img class="pull-left" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}"
+                    data-srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                    sizes="533px" srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                    src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}">
+                </div>
 
-                  <div class="">
-                    <!-- <iframe class=" lazyloaded" type="text/html" width="533" height="300" data-src="//www.youtube.com/embed/rUKOAwlyNag?enablejsapi=1&amp;autoplay=0&amp;origin=https%3A%2F%2Fwww.themoviedb.org&amp;hl=pt-BR&amp;modestbranding=1&amp;fs=1"
-                      frameborder="0" allowfullscreen=""></iframe> -->
-                  </div>
-                  <div class="">
-                    <img class="backdrop fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}"
-                      data-srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
-                      sizes="533px" srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
-                      src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}">
-                  </div>
-
-                  <div class="poster">
-                    <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}}"
-                      data-srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
-                      alt="John Wick: De Volta ao Jogo" sizes="200px" srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
-                      src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.backdropPath}}">
-                  </div>
+                <div class="d-inline-block" style="width: 200px; height: 300px;">
+                  <img class="pull-left" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}}"
+                    data-srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.posterPath}} 2x"
+                    alt="John Wick: De Volta ao Jogo" sizes="200px" srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.posterPath}} 2x"
+                    src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}}">
                 </div>
               </div>
             </section>
 
-            <section class="panel" *ngIf="movieDetail.belongsToCollection">
-              <div id="collection_waypoint" class="collection" style="display: block;">
-                <style>
-                </style>
+            <hr>
 
-
+            <section class="row" style="margin-top:85px; margin-bottom:85px;" *ngIf="movieDetail.belongsToCollection">
                 <svg class="svg_overlay">
                   <filter id="monochrome" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
                     <feColorMatrix type="matrix" values="0.12 0 0 0 0
@@ -397,11 +262,12 @@
                   </filter>
                 </svg>
 
-                <div class="header collection">
-                  <div class="background-collection" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w1440_and_h320_bestv2' + movieDetail.belongsToCollection.backdrop_path + ')',
+                <div class="row position-relative color-white">
+                  <!-- <img [src]="'https://image.tmdb.org/t/p/w1440_and_h320_bestv2' + movieDetail.belongsToCollection.backdrop_path" alt=""> -->
+                  <!-- <div class="background-collection" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w1440_and_h320_bestv2' + movieDetail.belongsToCollection.backdrop_path + ')',
                     'background-size': 'cover',
-                    'background-position': '50% 50%'}"></div>
-                  <section class="panel collection">
+                    'background-position': '50% 50%'}"></div> -->
+                  <section class="position-relative">
                     <h2>Parte de {{movieDetail.title}}</h2>
                     <p>Faz parte de uma série de filmes da coleção</p>
 
@@ -410,13 +276,11 @@
                     </p>
                   </section>
                 </div>
-              </div>
             </section>
 
-            <section id="recommendation_waypoint" class="panel recommendations scroller">
-              <h3 dir="auto">Recomendações</h3>
-              <div class="scroller">
-
+            <section class="container mt-5">
+              <h3 class="row">Recomendações</h3>
+              <div class="row recommendations-videos-container">
                 <div *ngFor="let recommendation of movieDetail.recommendations?.slice(0,8)" class="item mini backdrop mini_card">
                   <div class="image_content">
                     <a href="/movie/156022" title="{{recommendation.title}}">
@@ -448,11 +312,8 @@
           </div>
 
         </div>
-      </div>
 
-      <div class="grey_column">
-        <div>
-
+      <div class="col-md-3 bg-grey d-none d-lg-block d-xl-block">
           <section class="split_column">
             <div>
               <div class="column no_bottom_pad">
@@ -517,7 +378,7 @@
                       <img width="24" height="24" src="https://www.themoviedb.org/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png"
                         srcset="https://www.themoviedb.org/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png 1x, https://www.themoviedb.org/static_cache/flags_v2/48/US-fc54af6e5c8237200d49fd6a49061fffeb8a7217bb9000acd1c02039b65b22ba.png 2x, https://www.themoviedb.org/static_cache/flags_v2/64/US-35bf08cd02d9c5ebef38cbfbd47c1c06f4d06203f8f0e5dce2d20c6cfb0281a7.png 3x"> 24 de Outubro de 2014
                       <br>
-                      <div class="certification">
+                      <div class="certification pl-0">
                         <div>
                           <span element="56901ce6c3a3680f89035195">R</span>
                         </div> Cinema</div>
@@ -558,7 +419,7 @@
                   </p>
                 </section>
 
-                <section class="genres right_column">
+                <!-- <section class="genres right_column">
                   <h4>
                     <bdi>Gêneros</bdi>
                   </h4>
@@ -575,7 +436,7 @@
 
                   </ul>
 
-                </section>
+                </section> -->
 
                 <section class="keywords right_column">
                   <h4>
@@ -732,151 +593,8 @@
 
           </section>
 
-        </div>
       </div>
 
     </div>
-    <!-- 
-<script>
-  $(document).ready(function() {
-
-    $('section.social_panel a.media_panel').on('click', function(e){
-      e.preventDefault();
-      var link = $(this);
-      var selected_id = this.id;
-
-      $.ajax({
-        url: '/movie/245891-john-wick/remote/social_panel/' + selected_id + '?timezone=America/New_York',
-        headers: {
-          'Accept-Language': 'pt-BR',
-          'Content-Type': 'text/html;charset=utf-8'
-        }
-      }).done(function(response) {
-        $('section.social_panel ul li.active').removeClass('active');
-        link.parent().addClass('active');
-
-        $('section.social_panel div.content').hide().html(response).fadeIn(300);
-        $("section.social_panel div.content").find("script").each(function(i) {
-          eval($(this).text());
-        });
-      });
-    });
-
-    var review_panel_height = $('div.header.large.review').innerHeight();
-    $('div.review_container div.image').height(review_panel_height);
-
-    var original_media_panel_content = $('section.media_panel.media div.content div.original_content').clone();
-
-    $('section.media_panel.media a.media_panel').on('click', function(e){
-      e.preventDefault();
-      var link = $(this);
-      var item_count = link.find('span').text();
-      var selected_id = this.id;
-
-      switch(selected_id) {
-        case 'popular':
-          var view_all = ''
-          break;
-        case 'videos':
-          var view_all = '<a href="/movie/245891-john-wick/videos">Mostrar todos os vídeos</a>'
-          break;
-        case 'backdrops':
-          var view_all = '<a href="/movie/245891-john-wick/images/backdrops">Mostrar todas as imagens de fundo</a>'
-          break;
-        default:
-          var view_all = '<a href="/movie/245891-john-wick/images/posters">Mostrar todos os pôsteres</a>'
-      }
-
-      if (selected_id == 'popular') {
-        $('section.media_panel.media ul li.active').removeClass('active');
-        link.parent().addClass('active');
-        $('section.media_panel.media div.content').scrollLeft(0);
-        $('section.media_panel.media div.content').html(original_media_panel_content);
-        $('section.media_panel.media ul li.view_all').html(view_all);
-      } else {
-        $.ajax({
-          url: '/movie/245891-john-wick/remote/media_panel/' + selected_id + '?translate=false&item_count=' + item_count,
-          type: 'GET'
-        }).done(function(response) {
-          $('section.media_panel.media ul li.active').removeClass('active');
-          link.parent().addClass('active');
-          $('section.media_panel.media div.content').scrollLeft(0);
-          $('section.media_panel.media div.content').html(response);
-          $('section.media_panel.media ul li.view_all').html(view_all);
-        });
-      }
-    });
-
-    
-
-    function createPopularitySparkline(response) {
-      $("#popularity_chart").kendoSparkline({
-        data: response.values,
-        legend: {
-          visible: false
-        },
-        plotArea: {
-          opacity: 0,
-          margin: 0
-        },
-        chartArea: {
-          margin: {
-            top: 1,
-            bottom: 0,
-            left: 0,
-            right: 0
-          },
-          padding: 0,
-          background: 'transparent'
-        },
-        categoryAxis: {
-          categories: response.labels,
-          crosshair: {
-            visible: false
-          }
-        },
-        series: [{
-          type: 'line',
-          color: "#021f3f",
-          data: response.values,
-          spacing: 0,
-          gap: 0,
-          width: 2,
-          padding: 0
-        }],
-        tooltip: {
-          visible: true,
-          background: "#081c24",
-          color: "#fff",
-          border: {
-            width: 0,
-            color: "transparent"
-          },
-          font: "600 1.2em 'Source Sans Pro', 'Arial', sans-serif",
-          format: "N0",
-          template: "Ranked #= Math.abs(value) #"
-        },
-      });
-    }
-
-    popularity_loaded = false;
-    new Waypoint({
-      element: document.getElementById('popularity_waypoint'),
-      handler: function(direction) {
-        if (direction == 'down' && !popularity_loaded) {
-          $.ajax({
-            url: '/movie/245891-john-wick/remote/popularity?translate=false',
-            type: 'GET'
-          }).done(function(response) {
-            popularity_loaded = true;
-            createPopularitySparkline(response);
-          });
-        }
-      },
-      offset: '100%'
-    });
-
-  });
-</script> -->
-  </div>
+  <!-- </div> -->
 </section>

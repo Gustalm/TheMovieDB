@@ -12,15 +12,27 @@ export class MoviesListComponent implements OnInit {
   totalPages: number;
   totalResults: number;
   movies: Movie[] = [];
+  genres: any[] = [];
+  genreId: number = 0;
 
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {
     this.getMovies({});
+    this.getGenres();
   }
 
-  getMovies(paramObject: any){
-    var aox = {};
+  getGenres(){
+    this.resetPagination();
+    this.movieService.getGenres().subscribe(data  => {
+      this.genres = data['genres'].map(genres => {return genres});
+    });
+  }
+
+  getMovies(paramObject: any = {}){
+    if(this.genreId)
+      paramObject["with_genres"] = this.genreId;
+
     this.movieService.getMovies(paramObject).subscribe(data  => {
       this.totalPages = data['total_pages'];
       this.totalResults = data['total_results'];
@@ -31,7 +43,15 @@ export class MoviesListComponent implements OnInit {
   }
 
   onChangeGenre(param: any){
-    debugger;
-    this.getMovies({with_genres: param})
+    this.getMovies()
+  }
+
+  onChangePage(numberPage: number){
+    this.currentPage = numberPage;
+    this.getMovies({ page: numberPage });
+  }
+
+  resetPagination(){
+    this.currentPage = 1;
   }
 }

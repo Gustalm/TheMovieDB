@@ -1,0 +1,22 @@
+<section class="container">
+  <h3 class="row">Elenco principal</h3>
+  <ul class="list-group d-inline-block">
+    <!-- suscetivel a erro -->
+    <li *ngFor="let person of cast.slice(0,5)" class="list-group-item d-inline-block card" style="padding: 0.55rem 1.15rem;">
+      <a href="/person/{{person.id}}">
+        <img class="fuid-img" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}}"
+          data-srcset="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}} 1x, https://image.tmdb.org/t/p/w276_and_h350_face{{person.profile_path}} 2x"
+          sizes="138px" srcset="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}} 1x, https://image.tmdb.org/t/p/w276_and_h350_face{{person.profile_path}} 2x"
+          src="https://image.tmdb.org/t/p/w138_and_h175_face{{person.profile_path}}">
+      </a>
+      <p>
+        <a href="/person/{{person.id}}">{{person.name}}</a>
+      </p>
+      <p class="character">{{person.character}}</p>
+    </li>
+  </ul>
+
+  <p class="new_button">
+    <a class="" href="/movie/{{movieId}}/cast">Elenco e equipe técnica completos</a>
+  </p>
+</section>

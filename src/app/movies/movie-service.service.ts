@@ -21,7 +21,11 @@ export class MovieService {
     return this.http.get(this.getApiUrl("movie/" + id.toString(), {}));
   }
 
-  private getApiUrl(method: string, params: {}) {
+  getGenres(): Observable<any>{
+    return this.http.get(this.getApiUrl("genre/movie/list"));
+  }
+
+  private getApiUrl(method: string, params: any = {}) {
     var url = this.urlBase + method + "?api_key=" + this.apiKey + "&language=pt-BR&append_to_response=videos,images,keywords,recommendations,credits,collection";
     Object.keys(params).forEach(function (key, index) {
       url += "&" + key + "=" + params[key];

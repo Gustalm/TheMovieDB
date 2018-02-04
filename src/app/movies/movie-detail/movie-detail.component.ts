@@ -17,7 +17,6 @@ export class MovieDetailComponent implements OnInit {
 
       this.movieService.getMovie(+data['id']).subscribe(data => {
         this.movieDetail = new MovieDetail(data);
-        debugger;
       });
     })
   }
