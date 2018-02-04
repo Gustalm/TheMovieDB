@@ -1,4 +1,5 @@
 <div class="item poster card col-xs-6 mt-4">
+  <div class="row">
   <div class="image_content">
     <a id="movie_{{movie.id}}" class="result" [routerLink]="['movies', movie.id]" title="{{movie.title}}">
       <img class="poster fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.backdropPath}}"
@@ -14,7 +15,6 @@
             <p>Última semana: 25</p>
           </div>
         </span>
-        <span id="popularity_51edf8cf19c295756a1149ed" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
         <span class="right">
 
         </span>
@@ -22,31 +22,14 @@
     </a>
   </div>
   <div class="info">
-    <!-- <div class="wrapper">
-      <div class="consensus tight">
-        <div class="outer_ring">
-          <div class="user_score_chart 558e8490925141579e003923" data-percent="71.0" data-track-color="#204529" data-bar-color="#21d07a">
-            <div class="percent">
-              <span class="icon icon-r71"></span>
-            </div>
-            <canvas height="32" width="32"></canvas>
-          </div>
-        </div>
-      </div>
-      <div class="flex">
-        <a id="movie_346364" class="title result" href="/movie/346364" title="It: A Coisa" alt="It: A Coisa">It: A Coisa</a>
-        <span> 5 de Setembro de 2017</span>
-      </div>
-    </div> -->
     <p class="flex">
       <a id="movie_{{movie.id}}" class="title result" [routerLink]="['movies', movie.id]" title="{{movie.title}}">{{movie.title}}</a>
       <span class="vote_average">{{movie.voteAverage}}
-        <span id="rating_51edf8cf19c295756a1149ed" class="glyphicons glyphicons-star x1 rating movie"></span>
       </span>
     </p>
     <p class="meta flex">
       <span class="release_date">
-        <span class="glyphicons glyphicons-calendar x1"></span> {{movie.releaseYear}}</span>
+        {{movie.releaseYear}}</span>
       <span class="genres">Ação, Aventura, Fantasia</span>
     </p>
     <p class="overview">{{movie.overview | slice:0:250}}...</p>
@@ -55,6 +38,30 @@
     </p>
   </div>
 </div>
+</div>
+
+
+
+<!-- <section>
+    <div class="container">
+      <div class="card">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card-block">
+              <h4 class="card-title">Curabitur gravida vestibulum imperdiet.</h4>
+              <p class="card-text">Cras convallis ut turpis vitae facilisis. Morbi eu augue vel quam efficitur rhoncus vitae eget lectus. Cras augue ligula, aliquam ut enim ut, feugiat imperdiet sem. Integer sed mi quis nisl eleifend interdum.</p>
+              <p class="card-text">Cras convallis ut turpis vitae facilisis. Morbi eu augue vel quam efficitur rhoncus vitae eget lectus. Cras augue ligula, aliquam ut enim ut, feugiat imperdiet sem.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-img-bottom">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
 <!-- <div class="col-xm-3">
   <div class="panel panel-default">

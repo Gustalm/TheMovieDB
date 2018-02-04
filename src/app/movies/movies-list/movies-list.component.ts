@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie-service.service';
 import { Movie } from '../models/movie.model';
+import { Pagination } from '../models/pagination.model';
 
 @Component({
   selector: 'app-movies-list',
@@ -8,9 +9,8 @@ import { Movie } from '../models/movie.model';
   styleUrls: ['./movies-list.component.css']
 })
 export class MoviesListComponent implements OnInit {
-  currentPage: number = 1;
-  totalPages: number;
-  totalResults: number;
+  loading: boolean = false;
+  pagination: Pagination;
   movies: Movie[] = [];
   genres: any[] = [];
   genreId: number = 0;
@@ -23,20 +23,20 @@ export class MoviesListComponent implements OnInit {
   }
 
   getGenres(){
-    this.resetPagination();
     this.movieService.getGenres().subscribe(data  => {
       this.genres = data['genres'].map(genres => {return genres});
     });
   }
 
   getMovies(paramObject: any = {}){
+    this.loading = true;
     if(this.genreId)
       paramObject["with_genres"] = this.genreId;
 
     this.movieService.getMovies(paramObject).subscribe(data  => {
-      this.totalPages = data['total_pages'];
-      this.totalResults = data['total_results'];
+      this.pagination = new Pagination(data);
       this.movies = data['results'].map(item => {
+        this.loading = false;
         return new Movie(item);
       })
     });
@@ -46,12 +46,13 @@ export class MoviesListComponent implements OnInit {
     this.getMovies()
   }
 
-  onChangePage(numberPage: number){
-    this.currentPage = numberPage;
-    this.getMovies({ page: numberPage });
+  onChangePage(pagination: Pagination){
+    debugger;
+    this.getMovies({ page: pagination.page });
+    window.scrollTo(0, 0);
   }
 
-  resetPagination(){
-    this.currentPage = 1;
-  }
+  // resetPagination(){
+  //   this.currentPage = 1;
+  // }
 }

@@ -1,43 +1,44 @@
 <section class="container-fluid">
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
   <app-movie-sinopsys [movieDetail]="movieDetail">
   </app-movie-sinopsys>
 
   <!-- <div> -->
-    <div class="row bg-white text-center detail-menu-container justify-content-center">
-      <ul class="list-group d-inline-block">
-        <li class="list-group-item d-inline-block menu-item">
-          <a class="" href="/movie/{{movieDetail.id}}/discuss" title="Discussões">Discussões</a>
-        </li>
-        <li class="list-group-item d-inline-block  menu-item">
-          <a class="" href="/movie/{{movieDetail.id}}/reviews" title="Resenhas">Resenhas</a>
-        </li>
-        <li class="list-group-item d-inline-block  menu-item">
-          <a class="" href="/movie/{{movieDetail.id}}/videos" title="Vídeos">Vídeos</a>
-        </li>
-        <li class="list-group-item d-inline-block  menu-item">
-          <a class="" href="/movie/{{movieDetail.id}}/images/posters" title="Imagens">Imagens</a>
-        </li>
-        <li class="list-group-item d-inline-block menu-item">
-          <a class="" href="/movie/{{movieDetail.id}}/changes" title="Alterações">Alterações</a>
-        </li>
-        <li class="list-group-item d-inline-block  menu-item">
-          <a class="no_click report" window="movie" href="#" title="Relatório">Relatório</a>
-        </li>
-        <li class="list-group-item d-inline-block menu-item">
-          <a id="share" class="no_click" href="#" title="Compartilhar">Compartilhar</a>
-        </li>
+  <div class="row bg-white text-center detail-menu-container justify-content-center">
+    <ul class="list-group d-inline-block">
+      <li class="list-group-item d-inline-block menu-item">
+        <a class="" href="/movie/{{movieDetail.id}}/discuss" title="Discussões">Discussões</a>
+      </li>
+      <li class="list-group-item d-inline-block  menu-item">
+        <a class="" href="/movie/{{movieDetail.id}}/reviews" title="Resenhas">Resenhas</a>
+      </li>
+      <li class="list-group-item d-inline-block  menu-item">
+        <a class="" href="/movie/{{movieDetail.id}}/videos" title="Vídeos">Vídeos</a>
+      </li>
+      <li class="list-group-item d-inline-block  menu-item">
+        <a class="" href="/movie/{{movieDetail.id}}/images/posters" title="Imagens">Imagens</a>
+      </li>
+      <li class="list-group-item d-inline-block menu-item">
+        <a class="" href="/movie/{{movieDetail.id}}/changes" title="Alterações">Alterações</a>
+      </li>
+      <li class="list-group-item d-inline-block  menu-item">
+        <a class="no_click report" window="movie" href="#" title="Relatório">Relatório</a>
+      </li>
+      <li class="list-group-item d-inline-block menu-item">
+        <a id="share" class="no_click" href="#" title="Compartilhar">Compartilhar</a>
+      </li>
 
-      </ul>
-    </div>
+    </ul>
+  </div>
 
-    <div class="row bg-white">
-        <div class="col-xm-12 col-md-8 container ">
-          <div>
-            <app-movie-cast [cast]="movieDetail.mainCast" [movieId]="movieDetail.Id">
-            </app-movie-cast>
+  <div class="row bg-white">
+    <div class="col-xm-12 col-md-8 container ">
+      <div>
+        <app-movie-cast [cast]="movieDetail.mainCast" [movieId]="movieDetail.id">
+        </app-movie-cast>
 
-            <hr>
-            <!-- <section class="panel media_panel social_panel">
+        <hr>
+        <section class="panel media_panel social_panel d-none d-lg-block d-xl-block">
               <section class="review">
                 <div class="menu">
                   <h3 dir="auto">Social</h3>
@@ -202,224 +203,204 @@
 
                 </div>
               </section>
-            </section> -->
-
-            <section class="container">
-              <div class="row">
-                <h3 class="pt-2" dir="auto">Mídia</h3>
-                <ul class="list-group d-inline-block">
-                  <li class="active list-group-item d-inline-block media-item">
-                    <a id="popular" class="media_panel">Mais popular</a>
-                  </li>
-                  <li class="list-group-item d-inline-block media-item">
-                    <a id="videos">Vídeos
-                      <!-- <span>{{movideDetail.videos.length}}</span> -->
-                    </a>
-                  </li>
-                  <li class="list-group-item d-inline-block media-item">
-                    <a id="backdrops">Imagens de fundo
-                      <!-- <span>{{movideDetail.images.backdrops.length}}</span> -->
-                    </a>
-                  </li>
-                  <li class="list-group-item d-inline-block media-item">
-                    <a id="posters">Pôsteres
-                      <!-- <span>{{movideDetail.images.posters.length}}</span> -->
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="row overflow-x-scroll media-content-container d-inline-block">
-                <div class="d-inline-block">
-                    <iframe width="400px" height="300px" class="pull-left"
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                    </iframe>
-                </div>
-                <div class="d-inline-block" style="width: 533px; height: 300px;">
-                  <img class="pull-left" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}"
-                    data-srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
-                    sizes="533px" srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
-                    src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}">
-                </div>
-
-                <div class="d-inline-block" style="width: 200px; height: 300px;">
-                  <img class="pull-left" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}}"
-                    data-srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.posterPath}} 2x"
-                    alt="John Wick: De Volta ao Jogo" sizes="200px" srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.posterPath}} 2x"
-                    src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}}">
-                </div>
-              </div>
             </section>
 
-            <hr>
+        <section class="container">
+          <div class="row">
+            <h3 class="pt-2" dir="auto">Mídia</h3>
+            <ul class="list-group d-inline-block">
+              <li class="active list-group-item d-inline-block media-item">
+                <a id="popular" class="media_panel">Mais popular</a>
+              </li>
+              <li class="list-group-item d-inline-block media-item">
+                <a id="videos">Vídeos
+                  <!-- <span>{{movideDetail.videos.length}}</span> -->
+                </a>
+              </li>
+              <li class="list-group-item d-inline-block media-item">
+                <a id="backdrops">Imagens de fundo
+                  <!-- <span>{{movideDetail.images.backdrops.length}}</span> -->
+                </a>
+              </li>
+              <li class="list-group-item d-inline-block media-item">
+                <a id="posters">Pôsteres
+                  <!-- <span>{{movideDetail.images.posters.length}}</span> -->
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="row overflow-x-scroll media-content-container d-inline-block">
+            <div class="d-inline-block">
+              <iframe width="400px" height="300px" class="pull-left" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+              </iframe>
+            </div>
+            <div class="d-inline-block" style="width: 533px; height: 300px;">
+              <img class="pull-left" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}"
+                data-srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                sizes="533px" srcset="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}} 1x, https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{movieDetail.backdropPath}} 2x"
+                src="https://image.tmdb.org/t/p/w533_and_h300_bestv2{{movieDetail.backdropPath}}">
+            </div>
 
-            <section class="row" style="margin-top:85px; margin-bottom:85px;" *ngIf="movieDetail.belongsToCollection">
-                <svg class="svg_overlay">
-                  <filter id="monochrome" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
-                    <feColorMatrix type="matrix" values="0.12 0 0 0 0
+            <div class="d-inline-block" style="width: 200px; height: 300px;">
+              <img class="pull-left" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}}"
+                data-srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.posterPath}} 2x"
+                alt="John Wick: De Volta ao Jogo" sizes="200px" srcset="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}} 1x, https://image.tmdb.org/t/p/w400_and_h600_bestv2{{movieDetail.posterPath}} 2x"
+                src="https://image.tmdb.org/t/p/w200_and_h300_bestv2{{movieDetail.posterPath}}">
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="row" style="margin-top:85px; margin-bottom:85px;" *ngIf="movieDetail.belongsToCollection">
+          <svg class="svg_overlay">
+            <filter id="monochrome" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
+              <feColorMatrix type="matrix" values="0.12 0 0 0 0
               0.42 0 0 0 0
               0.53 0 0 0 0
               0 0 0 1 0"></feColorMatrix>
-                  </filter>
-                </svg>
+            </filter>
+          </svg>
 
-                <div class="row position-relative color-white">
-                  <!-- <img [src]="'https://image.tmdb.org/t/p/w1440_and_h320_bestv2' + movieDetail.belongsToCollection.backdrop_path" alt=""> -->
-                  <!-- <div class="background-collection" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w1440_and_h320_bestv2' + movieDetail.belongsToCollection.backdrop_path + ')',
+          <div class="row position-relative color-white">
+            <div class="background-collection" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w1440_and_h320_bestv2' + movieDetail.belongsToCollection.backdrop_path + ')',
                     'background-size': 'cover',
-                    'background-position': '50% 50%'}"></div> -->
-                  <section class="position-relative">
-                    <h2>Parte de {{movieDetail.title}}</h2>
-                    <p>Faz parte de uma série de filmes da coleção</p>
+                    'background-position': '50% 50%',
+                  'width': 'calc((100vw - 1081px) / 2 + 780px)'}"></div>
+            <section class="position-relative">
+              <h2>Parte da coleção {{movieDetail.title}}</h2>
+              <p>Faz parte de uma série de filmes desta coleção</p>
 
-                    <p class="new_button rounded">
-                      <a class="color-white" href="/collection/{{movieDetail.id}}?language=pt-BR">Mostrar a coletânea</a>
-                    </p>
-                  </section>
-                </div>
+              <p class="new_button rounded">
+                <a class="color-white" href="/collection/{{movieDetail.id}}?language=pt-BR">Mostrar a coletânea</a>
+              </p>
             </section>
+          </div>
+        </section>
 
-            <section class="container mt-5">
-              <h3 class="row">Recomendações</h3>
-              <div class="row recommendations-videos-container">
-                <div *ngFor="let recommendation of movieDetail.recommendations?.slice(0,8)" class="item mini backdrop mini_card">
-                  <div class="image_content">
-                    <a href="/movie/156022" title="{{recommendation.title}}">
-                      <img class="backdrop fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}}"
-                        data-srcset="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_bestv2{{recommendation.backdrop_path}} 2x"
-                        sizes="85px" srcset="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_bestv2{{recommendation.backdrop_path}} 2x"
-                        src="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}}">
-                      <div class="meta">
-                        <span class="release_date">
-                          <span class="glyphicons glyphicons-calendar x1"></span>{{recommendation.releaseDate}}</span>
-                        <span>
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                  <p class="movie flex">
-                    <a class="title" href="/movie/156022" title="{{recommendation.title}}">
-                      <bdi>{{recommendation.title}}</bdi>
-                    </a>
-                    <span class="vote_average">{{recommendation.vote_average}}
-                      <span id="rating_50e9f941760ee3238750a780" class="glyphicons glyphicons-star x1 right rating"></span>
+        <section class="container mt-5">
+          <h3 class="row">Recomendações</h3>
+          <div class="row recommendations-videos-container">
+            <div *ngFor="let recommendation of movieDetail.recommendations?.slice(0,8)" class="item mini backdrop mini_card">
+              <div class="image_content">
+                <a href="/movie/156022" title="{{recommendation.title}}">
+                  <img class="backdrop fade lazyautosizes lazyloaded" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}}"
+                    data-srcset="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_bestv2{{recommendation.backdrop_path}} 2x"
+                    sizes="85px" srcset="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_bestv2{{recommendation.backdrop_path}} 2x"
+                    src="https://image.tmdb.org/t/p/w250_and_h141_bestv2{{recommendation.backdrop_path}}">
+                  <div class="meta">
+                    <span class="release_date">
+                      <span class="glyphicons glyphicons-calendar x1"></span>{{recommendation.releaseDate}}</span>
+                    <span>
                     </span>
-                  </p>
-                </div>
+                  </div>
+                </a>
               </div>
-
-            </section>
-
+              <p class="movie flex">
+                <a class="title" href="/movie/156022" title="{{recommendation.title}}">
+                  <bdi>{{recommendation.title}}</bdi>
+                </a>
+                <span class="vote_average">{{recommendation.vote_average}}
+                  <span id="rating_50e9f941760ee3238750a780" class="glyphicons glyphicons-star x1 right rating"></span>
+                </span>
+              </p>
+            </div>
           </div>
 
-        </div>
+        </section>
 
-      <div class="col-md-3 bg-grey d-none d-lg-block d-xl-block">
-          <section class="split_column">
-            <div>
-              <div class="column no_bottom_pad">
-                <section class="facts left_column">
+      </div>
 
-                  <svg class="svg_overlay">
-                    <filter id="black" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
-                      <feColorMatrix type="matrix" values="0 0 0 0 0
+    </div>
+
+    <div class="col-md-3 bg-grey d-none d-lg-block d-xl-block">
+      <section class="split_column">
+        <div>
+          <div class="column no_bottom_pad">
+            <section class="facts left_column">
+
+              <svg class="svg_overlay">
+                <filter id="black" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
+                  <feColorMatrix type="matrix" values="0 0 0 0 0
                   0 0 0 0 0
                   0 0 0 0 0
                   0 0 0 1 0"></feColorMatrix>
-                    </filter>
-                  </svg>
-                  <div class="fantv">
-                    <p>Find out where to watch this on:</p>
-                    <a href="https://www.fan.tv/movies/223332" target="_blank" rel="noopener">
-                      <img class="fantv lazyloaded" width="59" height="24" data-src="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png"
-                        data-srcset="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png 3x"
-                        srcset="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png 3x"
-                        src="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png">
-                    </a>
+                </filter>
+              </svg>
+              <div class="fantv">
+                <p>Find out where to watch this on:</p>
+                <a href="https://www.fan.tv/movies/223332" target="_blank" rel="noopener">
+                  <img class="fantv lazyloaded" width="59" height="24" data-src="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png"
+                    data-srcset="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png 3x"
+                    srcset="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png 3x"
+                    src="https://www.themoviedb.org/static_cache/logos/fan_tv_logo-59x24-ee9dabe304ffdb3be4a7f5523939587db884798499cf4a48368ff01adb4f5298.png">
+                </a>
+              </div>
+
+              <h4>
+                <bdi>Informações</bdi>
+              </h4>
+
+              <p class="wrap">
+                <strong>Título original</strong> {{movieDetail.title}}</p>
+
+              <p>
+                <strong>
+                  <bdi>Situação</bdi>
+                </strong> {{movieDetail.status}}</p>
+
+
+              <p class="no_bottom_pad">
+                <strong>Informações de lançamento</strong>
+              </p>
+              <ul class="releases" data-role="tooltip">
+
+                <li>
+                  <img width="24" height="24" src="https://www.themoviedb.org/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png"
+                    srcset="https://www.themoviedb.org/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png 1x, https://www.themoviedb.org/static_cache/flags_v2/48/US-fc54af6e5c8237200d49fd6a49061fffeb8a7217bb9000acd1c02039b65b22ba.png 2x, https://www.themoviedb.org/static_cache/flags_v2/64/US-35bf08cd02d9c5ebef38cbfbd47c1c06f4d06203f8f0e5dce2d20c6cfb0281a7.png 3x"> 24 de Outubro de 2014
+                  <br>
+                  <div class="certification pl-0">
+                    <div>
+                      <span element="56901ce6c3a3680f89035195">R</span>
+                    </div> Cinema</div>
+                  <div id="56901ce6c3a3680f89035195" class="tooltip certification_info hide">
+                    <div class="certification_tooltip">
+                      <h3>Significado</h3>
+                      <p>Menores de 17 anos devem estar acompanhados de um dos pais ou guardião legal de 21 anos ou mais. O
+                        pai/guardião deve estar com o menor durante todo o filme. Pode conter profanidade extrema, sexualidade
+                        gráfica, nudez, violência extrema, horror, desmembramento e uso intenso de drogas.</p>
+                    </div>
                   </div>
+                </li>
+
+              </ul>
 
 
-                  <span class="social_links">
+              <p>
+                <strong>
+                  <bdi>Idioma original</bdi>
+                </strong> English</p>
+              <p>
+                <strong>
+                  <bdi>Duração</bdi>
+                </strong> 1h 41m</p>
+              <p>
+                <strong>
+                  <bdi>Orçamento</bdi>
+                </strong> {{movieDetail.budget | currency}}</p>
+              <p>
+                <strong>
+                  <bdi>Receita</bdi>
+                </strong> {{movieDetail.revenue | currency}}</p>
+              <p>
+                <strong>
+                  <bdi>Site oficial</bdi>
+                </strong>
+                <a href="{{movieDetail.homepage}}" target="_blank" rel="noopener">{{movieDetail.homepage}}</a>
+              </p>
+            </section>
 
-                    <a class="social_link" href="https://www.facebook.com/johnwickmovie" target="_blank" rel="noopener">
-                      <span class="social social-facebook"></span>
-                    </a>
-
-
-                    <a class="social_link" href="https://twitter.com/JohnWickMovie" target="_blank" rel="noopener">
-                      <span class="social social-twitter"></span>
-                    </a>
-
-
-                    <a class="social_link" href="https://instagram.com/johnwickmovie/" target="_blank" rel="noopener">
-                      <span class="social social-instagram"></span>
-                    </a>
-
-                  </span>
-
-                  <h4>
-                    <bdi>Informações</bdi>
-                  </h4>
-
-                  <p class="wrap">
-                    <strong>Título original</strong> {{movieDetail.title}}</p>
-
-                  <p>
-                    <strong>
-                      <bdi>Situação</bdi>
-                    </strong> {{movieDetail.status}}</p>
-
-
-                  <p class="no_bottom_pad">
-                    <strong>Informações de lançamento</strong>
-                  </p>
-                  <ul class="releases" data-role="tooltip">
-
-                    <li>
-                      <img width="24" height="24" src="https://www.themoviedb.org/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png"
-                        srcset="https://www.themoviedb.org/static_cache/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png 1x, https://www.themoviedb.org/static_cache/flags_v2/48/US-fc54af6e5c8237200d49fd6a49061fffeb8a7217bb9000acd1c02039b65b22ba.png 2x, https://www.themoviedb.org/static_cache/flags_v2/64/US-35bf08cd02d9c5ebef38cbfbd47c1c06f4d06203f8f0e5dce2d20c6cfb0281a7.png 3x"> 24 de Outubro de 2014
-                      <br>
-                      <div class="certification pl-0">
-                        <div>
-                          <span element="56901ce6c3a3680f89035195">R</span>
-                        </div> Cinema</div>
-                      <div id="56901ce6c3a3680f89035195" class="tooltip certification_info hide">
-                        <div class="certification_tooltip">
-                          <h3>Significado</h3>
-                          <p>Menores de 17 anos devem estar acompanhados de um dos pais ou guardião legal de 21 anos ou mais.
-                            O pai/guardião deve estar com o menor durante todo o filme. Pode conter profanidade extrema,
-                            sexualidade gráfica, nudez, violência extrema, horror, desmembramento e uso intenso de drogas.</p>
-                        </div>
-                      </div>
-                    </li>
-
-                  </ul>
-
-
-                  <p>
-                    <strong>
-                      <bdi>Idioma original</bdi>
-                    </strong> English</p>
-                  <p>
-                    <strong>
-                      <bdi>Duração</bdi>
-                    </strong> 1h 41m</p>
-                  <p>
-                    <strong>
-                      <bdi>Orçamento</bdi>
-                    </strong> {{movieDetail.budget | currency}}</p>
-                  <p>
-                    <strong>
-                      <bdi>Receita</bdi>
-                    </strong> {{movieDetail.revenue | currency}}</p>
-                  <p>
-                    <strong>
-                      <bdi>Site oficial</bdi>
-                    </strong>
-                    <a href="{{movieDetail.homepage}}" target="_blank" rel="noopener">{{movieDetail.homepage}}</a>
-                  </p>
-                </section>
-
-                <!-- <section class="genres right_column">
+            <!-- <section class="genres right_column">
                   <h4>
                     <bdi>Gêneros</bdi>
                   </h4>
@@ -438,163 +419,163 @@
 
                 </section> -->
 
-                <section class="keywords right_column">
-                  <h4>
-                    <bdi>Palavras-chave</bdi>
-                  </h4>
+            <section class="keywords right_column">
+              <h4>
+                <bdi>Palavras-chave</bdi>
+              </h4>
 
-                  <ul>
-                    <li *ngFor="let keyword of movieDetail.keywords">
-                      <a href="/keyword/{{keyword.id}}-{{keyword.name}}/movie">{{keyword.name}}</a>
-                    </li>
-                  </ul>
+              <ul>
+                <li *ngFor="let keyword of movieDetail.keywords">
+                  <a href="/keyword/{{keyword.id}}-{{keyword.name}}/movie">{{keyword.name}}</a>
+                </li>
+              </ul>
 
-                </section>
+            </section>
+          </div>
+        </div>
+
+        <div>
+          <section class="content_score">
+            <h4 dir="auto">Avaliação do conteúdo</h4>
+            <div class="content_score">
+              <div class="false" style="width: 100%;">
+                <p>100</p>
               </div>
             </div>
-
-            <div>
-              <section class="content_score">
-                <h4 dir="auto">Avaliação do conteúdo</h4>
-                <div class="content_score">
-                  <div class="false" style="width: 100%;">
-                    <p>100</p>
-                  </div>
-                </div>
-                <p dir="auto">Aí sim! Ficou ótimo!</p>
-              </section>
-
-              <section class="leaderboard">
-                <h4>Principais colaboradores</h4>
-
-                <div class="leaders">
-
-
-                  <div class="edit_leader">
-                    <div class="avatar">
-                      <a href="/u/Torq00">
-
-                        <span class="round initials background_color light_blue">T</span>
-
-                      </a>
-                    </div>
-                    <div class="info">
-                      <p class="edit_count">39</p>
-                      <p>
-                        <a href="/u/Torq00">Torq00</a>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="edit_leader">
-                    <div class="avatar">
-                      <a href="/u/Paszt">
-
-                        <img class="avatar fade lazyloaded" data-src="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg"
-                          data-srcset="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 1x, https://image.tmdb.org/t/p/w90_and_h90_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 2x"
-                          alt="Elizabeth Jennings" srcset="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 1x, https://image.tmdb.org/t/p/w90_and_h90_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 2x"
-                          src="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg">
-
-                      </a>
-                    </div>
-                    <div class="info">
-                      <p class="edit_count">36</p>
-                      <p>
-                        <a href="/u/Paszt">Elizabeth Jennings</a>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="edit_leader">
-                    <div class="avatar">
-                      <a href="/u/DaMan">
-
-                        <img class="avatar fade lazyloaded" data-src="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45"
-                          data-srcset="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45 1x, https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=90 2x"
-                          alt="DaMan" srcset="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45 1x, https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=90 2x"
-                          src="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45">
-
-                      </a>
-                    </div>
-                    <div class="info">
-                      <p class="edit_count">34</p>
-                      <p>
-                        <a href="/u/DaMan">DaMan</a>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="edit_leader">
-                    <div class="avatar">
-                      <a href="/u/Wonderm00n">
-
-                        <img class="avatar fade lazyloaded" data-src="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45"
-                          data-srcset="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45 1x, https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=90 2x"
-                          alt="Marco Almeida" srcset="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45 1x, https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=90 2x"
-                          src="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45">
-
-                      </a>
-                    </div>
-                    <div class="info">
-                      <p class="edit_count">24</p>
-                      <p>
-                        <a href="/u/Wonderm00n">Marco Almeida</a>
-                      </p>
-                    </div>
-                  </div>
-
-
-                  <p>
-                    <a href="/movie/245891-john-wick/changes">
-                      <span class="glyphicons glyphicons-chevron-right x1"></span> Histórico de edições</a>
-                  </p>
-
-                </div>
-              </section>
-
-              <section class="popularity_trend">
-                <h4 dir="auto">Curva de popularidade</h4>
-                <div id="popularity_waypoint" class="popularity">
-                  <div id="popularity_chart" data-role="sparkline" class=" k-sparkline" style="position: relative;">
-                    <span data-role="surface" style="width: 208px; height: 50px;">
-                      <svg style="width: 100%; height: 100%; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        version="1.1">
-                        <defs></defs>
-                        <g>
-                          <path d="M0 0 L 208 0 208 50 0 50Z" stroke="none" fill="none"></path>
-                          <path d="M0 1 L 207 1 207 49 0 49Z" stroke="none" fill="#fff" fill-opacity="0"></path>
-                          <g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g>
-                              <g>
-                                <path d="M14.786 28.429 L 44.357 42.143 73.929 42.143 103.5 42.143 133.071 42.143 162.643 14.714 192.214 14.714" stroke="#021f3f"
-                                  stroke-width="2" fill="none"></path>
-                              </g>
-                            </g>
-                          </g>
-                          <g></g>
-                        </g>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-
-            <div class="">
-              <p class="rounded new_button pad">
-                <a class="color-white" href="/login?redirect=/movie/245891-john-wick/edit">
-                  <span class="glyphicons glyphicons-lock x1"></span> Entre com uma conta para editar</a>
-              </p>
-            </div>
-
+            <p dir="auto">Aí sim! Ficou ótimo!</p>
           </section>
 
-      </div>
+          <section class="leaderboard">
+            <h4>Principais colaboradores</h4>
+
+            <div class="leaders">
+
+
+              <div class="edit_leader">
+                <div class="avatar">
+                  <a href="/u/Torq00">
+
+                    <span class="round initials background_color light_blue">T</span>
+
+                  </a>
+                </div>
+                <div class="info">
+                  <p class="edit_count">39</p>
+                  <p>
+                    <a href="/u/Torq00">Torq00</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="edit_leader">
+                <div class="avatar">
+                  <a href="/u/Paszt">
+
+                    <img class="avatar fade lazyloaded" data-src="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg"
+                      data-srcset="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 1x, https://image.tmdb.org/t/p/w90_and_h90_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 2x"
+                      alt="Elizabeth Jennings" srcset="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 1x, https://image.tmdb.org/t/p/w90_and_h90_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg 2x"
+                      src="https://image.tmdb.org/t/p/w45_and_h45_face/iuCAORyW9YUQ0enlSlZExZJjqBC.jpg">
+
+                  </a>
+                </div>
+                <div class="info">
+                  <p class="edit_count">36</p>
+                  <p>
+                    <a href="/u/Paszt">Elizabeth Jennings</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="edit_leader">
+                <div class="avatar">
+                  <a href="/u/DaMan">
+
+                    <img class="avatar fade lazyloaded" data-src="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45"
+                      data-srcset="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45 1x, https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=90 2x"
+                      alt="DaMan" srcset="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45 1x, https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=90 2x"
+                      src="https://secure.gravatar.com/avatar/cecab3625e3016f935575e552569eed6.jpg?s=45">
+
+                  </a>
+                </div>
+                <div class="info">
+                  <p class="edit_count">34</p>
+                  <p>
+                    <a href="/u/DaMan">DaMan</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="edit_leader">
+                <div class="avatar">
+                  <a href="/u/Wonderm00n">
+
+                    <img class="avatar fade lazyloaded" data-src="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45"
+                      data-srcset="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45 1x, https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=90 2x"
+                      alt="Marco Almeida" srcset="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45 1x, https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=90 2x"
+                      src="https://secure.gravatar.com/avatar/d7573c4b2fc4df4ae044812c3ac1331f.jpg?s=45">
+
+                  </a>
+                </div>
+                <div class="info">
+                  <p class="edit_count">24</p>
+                  <p>
+                    <a href="/u/Wonderm00n">Marco Almeida</a>
+                  </p>
+                </div>
+              </div>
+
+
+              <p>
+                <a href="/movie/245891-john-wick/changes">
+                  <span class="glyphicons glyphicons-chevron-right x1"></span> Histórico de edições</a>
+              </p>
+
+            </div>
+          </section>
+
+          <section class="popularity_trend">
+            <h4 dir="auto">Curva de popularidade</h4>
+            <div id="popularity_waypoint" class="popularity">
+              <div id="popularity_chart" data-role="sparkline" class=" k-sparkline" style="position: relative;">
+                <span data-role="surface" style="width: 208px; height: 50px;">
+                  <svg style="width: 100%; height: 100%; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1">
+                    <defs></defs>
+                    <g>
+                      <path d="M0 0 L 208 0 208 50 0 50Z" stroke="none" fill="none"></path>
+                      <path d="M0 1 L 207 1 207 49 0 49Z" stroke="none" fill="#fff" fill-opacity="0"></path>
+                      <g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g>
+                          <g>
+                            <path d="M14.786 28.429 L 44.357 42.143 73.929 42.143 103.5 42.143 133.071 42.143 162.643 14.714 192.214 14.714" stroke="#021f3f"
+                              stroke-width="2" fill="none"></path>
+                          </g>
+                        </g>
+                      </g>
+                      <g></g>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+
+        <div class="">
+          <p class="rounded new_button pad">
+            <a class="color-white" href="/login?redirect=/movie/245891-john-wick/edit">
+              <span class="glyphicons glyphicons-lock x1"></span> Entre com uma conta para editar</a>
+          </p>
+        </div>
+
+      </section>
 
     </div>
+
+  </div>
   <!-- </div> -->
 </section>

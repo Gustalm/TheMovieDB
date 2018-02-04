@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from '../../models/movie.model';
+import { MovieDetail } from '../../models/movie-detail.model';
 
 @Component({
   selector: 'app-movie-sinopsys',
@@ -7,8 +8,7 @@ import { Movie } from '../../models/movie.model';
   styleUrls: ['./movie-sinopsys.component.css']
 })
 export class MovieSinopsysComponent implements OnInit {
-  @Input() movieDetail: Movie;
-
+  @Input() movieDetail: MovieDetail;
 
   constructor() {
    }

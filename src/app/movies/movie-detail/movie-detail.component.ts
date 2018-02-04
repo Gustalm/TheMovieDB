@@ -10,12 +10,14 @@ import { MovieDetail } from '../models/movie-detail.model';
   styleUrls: ['./movie-detail.component.css']
 })
 export class MovieDetailComponent implements OnInit {
-  movieDetail: MovieDetail = new MovieDetail({});;
+  loading: boolean = false;
+  movieDetail: MovieDetail = new MovieDetail({});
 
   constructor(private movieService: MovieService, private route: ActivatedRoute, private router: Router) {
+    this.loading = true;
     this.route.params.subscribe((data: Params) => {
-
       this.movieService.getMovie(+data['id']).subscribe(data => {
+        this.loading = false;
         this.movieDetail = new MovieDetail(data);
       });
     })

@@ -1,3 +1,19 @@
 div.item.card {
     width: auto !important;
 }
+
+.image_content{
+    width:169px !important;
+}
+
+.info{
+    width: 270px !important;
+}
+
+.view_more, .info{
+    padding: 10px 16px 10px 5px !important;
+}
+
+div.item p{
+    width:93%;
+}

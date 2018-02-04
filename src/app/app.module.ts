@@ -12,7 +12,8 @@ import { AppRoutingModule } from './app.routing.module';
 import { FormsModule } from '@angular/forms';
 import { MovieSinopsysComponent } from './movies/movie-detail/movie-sinopsys/movie-sinopsys.component';
 import { MovieCastComponent } from './movies/movie-detail/movie-cast/movie-cast.component';
-
+import { MoviesPaginationComponent } from './movies/movies-list/movies-pagination/movies-pagination.component';
+import { LoadingModule } from 'ngx-loading';
 
 @NgModule({
   declarations: [
@@ -23,13 +24,15 @@ import { MovieCastComponent } from './movies/movie-detail/movie-cast/movie-cast.
     MovieDetailComponent,
     MovieCardComponent,
     MovieSinopsysComponent,
-    MovieCastComponent
+    MovieCastComponent,
+    MoviesPaginationComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    LoadingModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

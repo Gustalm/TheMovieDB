@@ -18,6 +18,7 @@
 
 .sinopysis-content{
     color:white;
+    background-image: radial-gradient(circle at 20% 50%, rgba(21.96%, 12.94%, 38.04%, 0.98) 0%, rgba(21.96%, 12.94%, 38.04%, 0.88) 100%);
 }
 
 .profile{
@@ -45,5 +46,9 @@
     height: 100%;
     z-index: -1;
     display: block;
-    background-image: radial-gradient(circle at 20% 50%, rgba(21.96%, 12.94%, 38.04%, 0.98) 0%, rgba(21.96%, 12.94%, 38.04%, 0.88) 100%);
+    
 }
+/* 
+.bg-overlay, .overlay{
+    background-image: radial-gradient(circle at 20% 50%, rgba(21.96%, 12.94%, 38.04%, 0.98) 0%, rgba(21.96%, 12.94%, 38.04%, 0.88) 100%);
+} */

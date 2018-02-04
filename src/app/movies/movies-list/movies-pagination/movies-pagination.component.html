@@ -1,0 +1,19 @@
+<div class="row mt-5" *ngIf="pagination">
+  <p class="col left">Atualmente na página: {{pagination.page}} de {{pagination.totalPages | number}}
+    <span class="total_results grey">({{pagination.totalResults | number}} resultados)</span>
+  </p>
+
+  <div class="col right">
+    <a class="right" (click)="onChangePageClick( pagination.page + 1 )">
+      <button type="button" class="btn btn-secondary">Próxima</button>
+    </a>
+    <a *ngIf="pagination.page > 1" class="right" (click)="onChangePageClick( pagination.page - 1 )">
+      <button type="button" class="btn btn-secondary">Anterior</button>
+    </a>
+  </div>
+</div>
+
+<div class="row mt-5" *ngIf="!pagination">
+  <p class="col left">Sem resultados de filmes
+  </p>
+</div>

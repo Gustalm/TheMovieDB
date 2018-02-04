@@ -1,4 +1,5 @@
-<div class="media container-fluid">
+<div class="media container">
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
   <section class="main_content row">
 
     <h2>Descobrir Novos Filmes e Séries
@@ -15,11 +16,14 @@
         </span>
       </div>
 
-      <div class="card-deck row">
+      <app-movies-pagination [pagination]="pagination" (onChangePage)="onChangePage($event)"></app-movies-pagination>
+
+      <div class="card-deck row justify-content-center">
         <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
       </div>
 
-      <div class="row mt-5">
+      <app-movies-pagination [pagination]="pagination" (onChangePage)="onChangePage($event)"></app-movies-pagination>
+      <!-- <div class="row mt-5">
         <p class="col left">Atualmente na página: {{currentPage}} de {{totalPages | number}}
           <span class="total_results grey">({{totalResults | number}} resultados)</span>
         </p>
@@ -32,7 +36,7 @@
                 <button type="button" class="btn btn-secondary">Anterior</button>
             </a>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </section>
