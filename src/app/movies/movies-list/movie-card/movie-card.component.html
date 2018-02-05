@@ -1,4 +1,4 @@
-<div class="item poster card col-xs-6 mt-4">
+<!-- <div class="item poster card col-xs-6 mt-4">
   <div class="row">
   <div class="image_content">
     <a id="movie_{{movie.id}}" class="result" [routerLink]="['movies', movie.id]" title="{{movie.title}}">
@@ -38,42 +38,29 @@
     </p>
   </div>
 </div>
-</div>
+</div> -->
 
 
-
-<!-- <section>
-    <div class="container">
-      <div class="card">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card-block">
-              <h4 class="card-title">Curabitur gravida vestibulum imperdiet.</h4>
-              <p class="card-text">Cras convallis ut turpis vitae facilisis. Morbi eu augue vel quam efficitur rhoncus vitae eget lectus. Cras augue ligula, aliquam ut enim ut, feugiat imperdiet sem. Integer sed mi quis nisl eleifend interdum.</p>
-              <p class="card-text">Cras convallis ut turpis vitae facilisis. Morbi eu augue vel quam efficitur rhoncus vitae eget lectus. Cras augue ligula, aliquam ut enim ut, feugiat imperdiet sem.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
+        <div class="card mt-4">
+          <div class="row">
+            <div class="col-xs-12 col-sm-5">
+              <div class="card-img-bottom pointer"
+              [ngStyle]="{'background': 'url(https://image.tmdb.org/t/p/w185_and_h278_bestv2' + movie.backdropPath + ')'}" 
+              [routerLink]="['movies', movie.id]" title="{{movie.title}}">
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card-img-bottom">
+
+            <div class="col-xs-12 col-sm-7">
+              <div class="card-block pl-2 pr-2" [routerLink]="['movies', movie.id]">
+                <h4 class="card-title result">{{movie.title}}
+                    <span class="vote_average pull-right">{{movie.voteAverage}}
+                      </span>
+                </h4>
+                <h6 class="card-subtitle mb-2 text-muted d-inline-block">{{movie.releaseYear}}</h6>
+                <span class="genres pull-right">Ação, Aventura, Fantasia</span>
+                <p class="card-text">{{movie.overview | slice:0:250}}...</p>
+                <p class="view_more"><a id="movie_346364" class="result" [routerLink]="['movies', movie.id]" title="{{movie.title}}">Mais informações</a></p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section> -->
-
-<!-- <div class="col-xm-3">
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <p> Ut ultrices nisl nulla, vitae rutrum orci venenatis sit amet. Etiam sed quam nec metus sodales imperdiet. Vivamus tempus
-        aliquet sapien. Nulla hendrerit nisi a enim pulvinar, at malesuada nisi facilisis. Quisque mattis mollis erat et
-        ultrices. Phasellus pharetra efficitur eros eu auctor. Quisque ut elit pretium, tempor mauris in, tincidunt lacus.
-        Morbi viverra, mauris sed tincidunt aliquam, erat eros pretium augue, a auctor risus sapien non orci. Integer scelerisque
-        augue non nunc lacinia pellentesque. Sed vulputate, nibh sit amet suscipit lobortis, risus nisi vestibulum augue,
-        non laoreet libero nunc sit amet elit. Praesent ut nisl pharetra, vehicula sapien sed, rhoncus ligula. Ut a condimentum
-        mi. Pellentesque sed eros luctus, dapibus lectus ultrices, convallis nibh. Sed vulputate elit sit amet lacus ultricies,
-        id laoreet augue commodo. Integer at finibus diam, in commodo erat. Morbi vehicula vel sapien ac euismod.</p>
-    </div>
-  </div>
-</div> -->

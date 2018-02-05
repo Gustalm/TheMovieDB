@@ -278,7 +278,7 @@
           </div>
         </section>
 
-        <section class="container mt-5">
+        <section class="container mt-5" *ngIf="movieDetail.recommendations.length > 0">
           <h3 class="row">Recomendações</h3>
           <div class="row recommendations-videos-container">
             <div *ngFor="let recommendation of movieDetail.recommendations?.slice(0,8)" class="item mini backdrop mini_card">

@@ -1,0 +1,4 @@
+.person-paragraph,.character{
+    max-width: 140px;
+    word-wrap: break-word;
+}

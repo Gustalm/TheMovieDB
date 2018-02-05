@@ -30,7 +30,7 @@ export class MoviesListComponent implements OnInit {
 
   getMovies(paramObject: any = {}){
     this.loading = true;
-    if(this.genreId)
+    if(+this.genreId)
       paramObject["with_genres"] = this.genreId;
 
     this.movieService.getMovies(paramObject).subscribe(data  => {
