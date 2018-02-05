@@ -1,4 +1,3 @@
 {
-    "heroesUrl": "api/heroes",
-    "textfile": "assets/textfile.txt"
+    "apiKey": "0db8a6622b8920b82816a4171cfe5901"
   }
